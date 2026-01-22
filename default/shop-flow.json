@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1769080991903,
+    "description" : "",
+    "identifier" : "shop-flow",
+    "lastModifiedTimestamp" : 1769080991903,
+    "name" : "shop-flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
