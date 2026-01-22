@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1769080951840,
     "description" : "",
@@ -7,5 +8,853 @@
     "name" : "category-flow",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "30ef86d9-7739-3bcd-9443-90ec106bb790",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
+        "name" : "GetChild",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
+        "name" : "GetChild",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c0fb56ef-e0df-3234-bb61-06b75252ffab",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original", "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
+        "name" : "push_dataDB",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1bc58e8f-d275-3f09-a77f-e4be8e7f0761",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
+        "name" : "GetParent",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1cdd4ea3-c167-366e-9c06-f498a226e748",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original", "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f893d968-639a-3032-a84e-b18a96b7b284",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6e5e0046-9ea3-305b-ab83-e16581b4eb6c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3846dcfa-4349-3efa-85bf-34637c5d0405",
+        "name" : "GenerateFlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b2180801-726f-36ac-94c8-d533bde611a2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
+        "name" : "GetParent",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "f5e0029c-ab79-302b-af1f-936265139721",
+        "name" : "push_url_kafka",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3eefb4a9-11c7-30de-8a39-0309daf3f0b3",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b0e2fe31-51ce-3589-be7d-39696587d62a",
+        "name" : "create_url_crawl_extension",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88adfe1f-dcc2-3170-9310-8ba57be8a2ad",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f893d968-639a-3032-a84e-b18a96b7b284",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b0e2fe31-51ce-3589-be7d-39696587d62a",
+        "name" : "create_url_crawl_extension",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7d7be992-34df-35bd-afb0-1da33c804187",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "654536ba-bc80-372a-8860-807878f0913d",
+      "position" : {
+        "x" : 2164.4480423921846,
+        "y" : -117.35537389375475
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Category",
+    "outputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
+      "name" : "push_dataDB",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : 2432.0,
+        "y" : 48.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    }, {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f5e0029c-ab79-302b-af1f-936265139721",
+      "name" : "push_url_kafka",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : 2888.0,
+        "y" : -24.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    } ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f893d968-639a-3032-a84e-b18a96b7b284",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "JoltTransformJSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 216.0,
+        "y" : -144.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"category_list\": {\n          \"*\": {\n            \"catid\": \"[&1].catid\",\n            \"display_name\": \"[&1].name\",\n            \"level\": \"[&1].level\",\n            \"children\": \"[&1].children\"\n          }\n        }\n      }\n    }\n  }\n]\n"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-groovyx-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b0e2fe31-51ce-3589-be7d-39696587d62a",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "create_url_crawl_extension",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 2448.0,
+        "y" : -360.0
+      },
+      "properties" : {
+        "groovyx-failure-strategy" : "rollback"
+      },
+      "propertyDescriptors" : {
+        "groovyx-script-body" : {
+          "displayName" : "Script Body",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "groovyx-script-body",
+          "sensitive" : false
+        },
+        "groovyx-failure-strategy" : {
+          "displayName" : "Failure strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "groovyx-failure-strategy",
+          "sensitive" : false
+        },
+        "groovyx-additional-classpath" : {
+          "displayName" : "Additional classpath",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "groovyx-additional-classpath",
+          "sensitive" : false
+        },
+        "groovyx-script-file" : {
+          "displayName" : "Script File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "groovyx-script-file",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.groovyx.ExecuteGroovyScript",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3846dcfa-4349-3efa-85bf-34637c5d0405",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GenerateFlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -448.0,
+        "y" : -144.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "{\n  \"data\": {\n    \"category_list\": [\n      {\n        \"catid\": 11035567,\n        \"parent_catid\": 0,\n        \"name\": \"Men Clothes\",\n        \"display_name\": \"Thời Trang Nam\",\n        \"image\": \"687f3967b7c2fe6a134a2c11894eea4b\",\n        \"unselected_image\": \"fe2d27d140e1f34855c1bfe3168c1b58\",\n        \"selected_image\": \"9131b98c529e7ccfffc36193432aa927\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035568,\n            \"parent_catid\": 11035567,\n            \"name\": \"Jackets, Coats & Vests\",\n            \"display_name\": \"Áo Khoác\",\n            \"image\": \"9251aba9f04e2f2407578c8bf1764666\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035572,\n            \"parent_catid\": 11035567,\n            \"name\": \"Suit Jackets & Blazers\",\n            \"display_name\": \"Áo Vest và Blazer\",\n            \"image\": \"0f42e45eb51e8e25e160eaab370b3477\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035578,\n            \"parent_catid\": 11035567,\n            \"name\": \"Hoodies & Sweatshirts\",\n            \"display_name\": \"Áo Hoodie, Áo Len & Áo Nỉ\",\n            \"image\": \"db0745bb3e636523fd2617756fa8b09f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035583,\n            \"parent_catid\": 11035567,\n            \"name\": \"Jeans\",\n            \"display_name\": \"Quần Jeans\",\n            \"image\": \"5b0689b777035cfe7af759a707027b52\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035584,\n            \"parent_catid\": 11035567,\n            \"name\": \"Pants/Suits\",\n            \"display_name\": \"Quần Dài/Quần Âu\",\n            \"image\": \"6cc0c44875b5d2464fceae41bc7366f8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035590,\n            \"parent_catid\": 11035567,\n            \"name\": \"Shorts\",\n            \"display_name\": \"Quần Short\",\n            \"image\": \"5df9fef3f414995d6576cc71573660e6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035592,\n            \"parent_catid\": 11035567,\n            \"name\": \"Tops\",\n            \"display_name\": \"Áo\",\n            \"image\": \"4028340d69c8c74286b31531a3fbfdce\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035597,\n            \"parent_catid\": 11035567,\n            \"name\": \"Tanks\",\n            \"display_name\": \"Áo Ba Lỗ\",\n            \"image\": \"e953ee70629ba5770893b9088683f753\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035598,\n            \"parent_catid\": 11035567,\n            \"name\": \"Innerwear & Underwear\",\n            \"display_name\": \"Đồ Lót\",\n            \"image\": \"d7ea60e8b6f9940f943d13ef58a3e850\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035603,\n            \"parent_catid\": 11035567,\n            \"name\": \"Sleepwear\",\n            \"display_name\": \"Đồ Ngủ\",\n            \"image\": \"7d89b8d28669b770fe5fba66fa21e09a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035604,\n            \"parent_catid\": 11035567,\n            \"name\": \"Sets\",\n            \"display_name\": \"Đồ Bộ\",\n            \"image\": \"cca565321b356177532133974f7da7a6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035605,\n            \"parent_catid\": 11035567,\n            \"name\": \"Socks\",\n            \"display_name\": \"Vớ/Tất\",\n            \"image\": \"0fa64dcece678b1e1d3578464f328bca\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035606,\n            \"parent_catid\": 11035567,\n            \"name\": \"Traditional Wear\",\n            \"display_name\": \"Trang Phục Truyền Thống\",\n            \"image\": \"a53258bcba0067500864b8b3ed9591f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035611,\n            \"parent_catid\": 11035567,\n            \"name\": \"Costumes\",\n            \"display_name\": \"Đồ Hóa Trang\",\n            \"image\": \"bba3027a635023f03b4c98ddfeb305b0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035612,\n            \"parent_catid\": 11035567,\n            \"name\": \"Occupational Attire\",\n            \"display_name\": \"Trang Phục Ngành Nghề\",\n            \"image\": \"cba28fb65d13af89a1e1a709771c672a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035613,\n            \"parent_catid\": 11035567,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"28c7afc9836d133611baecc1283ae98f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035614,\n            \"parent_catid\": 11035567,\n            \"name\": \"Men Jewelries\",\n            \"display_name\": \"Trang Sức Nam\",\n            \"image\": \"a64779862feb4fb5fcac7ed6f4dec1f3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035620,\n            \"parent_catid\": 11035567,\n            \"name\": \"Eyewear\",\n            \"display_name\": \"Kính Mắt Nam\",\n            \"image\": \"57b90f015f8ea5a41fe8d2043fdbdc06\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035625,\n            \"parent_catid\": 11035567,\n            \"name\": \"Belts\",\n            \"display_name\": \"Thắt Lưng Nam\",\n            \"image\": \"0a64484c2848495eb72486f414176d92\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035626,\n            \"parent_catid\": 11035567,\n            \"name\": \"Neckties, Bow Ties & Cravats\",\n            \"display_name\": \"Cà vạt & Nơ cổ\",\n            \"image\": \"2bf91453f25ead859191f8e63674cda0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035627,\n            \"parent_catid\": 11035567,\n            \"name\": \"Additional Accessories\",\n            \"display_name\": \"Phụ Kiện Nam\",\n            \"image\": \"8d2ff5f6c753fb2dc08e20c83a92fa03\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035639,\n        \"parent_catid\": 0,\n        \"name\": \"Women Clothes\",\n        \"display_name\": \"Thời Trang Nữ\",\n        \"image\": \"75ea42f9eca124e9cb3cde744c060e4d\",\n        \"unselected_image\": \"293ca6f400001a38f477ef1c8ebe2831\",\n        \"selected_image\": \"7002b396e4d22be3decacceeef762265\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035648,\n            \"parent_catid\": 11035639,\n            \"name\": \"Pants & Leggings\",\n            \"display_name\": \"Quần\",\n            \"image\": \"299858e064025d073f0acc7798d77274\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035652,\n            \"parent_catid\": 11035639,\n            \"name\": \"Shorts\",\n            \"display_name\": \"Quần đùi\",\n            \"image\": \"a5d03e56bc832981c0b14d1b98492b5f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035656,\n            \"parent_catid\": 11035639,\n            \"name\": \"Skirts\",\n            \"display_name\": \"Chân váy\",\n            \"image\": \"cdb8fe568c29fa39905dafbe1f4fecd3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035657,\n            \"parent_catid\": 11035639,\n            \"name\": \"Jeans\",\n            \"display_name\": \"Quần jeans\",\n            \"image\": \"4c2da6e7db6d589b97b5e55a7dc11aab\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035658,\n            \"parent_catid\": 11035639,\n            \"name\": \"Dresses\",\n            \"display_name\": \"Đầm/Váy\",\n            \"image\": \"c102346ca37a44670acf9fb0bce8c4d0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035659,\n            \"parent_catid\": 11035639,\n            \"name\": \"Wedding Dresses\",\n            \"display_name\": \"Váy cưới\",\n            \"image\": \"707087f9883aa273a61eabb586d5408b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035660,\n            \"parent_catid\": 11035639,\n            \"name\": \"Jumpsuits, Playsuits & Overalls\",\n            \"display_name\": \"Đồ liền thân\",\n            \"image\": \"1168812ccc7ac288c01159b211bb89c9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035665,\n            \"parent_catid\": 11035639,\n            \"name\": \"Jackets, Coats & Vests\",\n            \"display_name\": \"Áo khoác, Áo choàng & Vest\",\n            \"image\": \"95f50b73f72c05b4aaf04aeaa728eebe\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035672,\n            \"parent_catid\": 11035639,\n            \"name\": \"Sweaters & Cardigans\",\n            \"display_name\": \"Áo len & Cardigan\",\n            \"image\": \"29a77c7aedd317061dff67efffee6957\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035673,\n            \"parent_catid\": 11035639,\n            \"name\": \"Hoodies & Sweatshirts\",\n            \"display_name\": \"Hoodie và Áo nỉ\",\n            \"image\": \"ca7311ecc7029c948ab305ac7d72757d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035677,\n            \"parent_catid\": 11035639,\n            \"name\": \"Sets\",\n            \"display_name\": \"Bộ\",\n            \"image\": \"d7a4f03b15220cc0188112c44ea6de51\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035682,\n            \"parent_catid\": 11035639,\n            \"name\": \"Lingerie & Underwear\",\n            \"display_name\": \"Đồ lót\",\n            \"image\": \"068539fd68043ac677554e36a2577d1f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035692,\n            \"parent_catid\": 11035639,\n            \"name\": \"Sleepwear & Pajamas\",\n            \"display_name\": \"Đồ ngủ\",\n            \"image\": \"7742c88f8502e179b1b3079dfc3ba307\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035640,\n            \"parent_catid\": 11035639,\n            \"name\": \"Tops\",\n            \"display_name\": \"Áo\",\n            \"image\": \"eaa7259abbf3da20645ba657f3a164e2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035730,\n            \"parent_catid\": 11035639,\n            \"name\": \"Sportwear\",\n            \"display_name\": \"Đồ tập\",\n            \"image\": \"c5aa300b3491b940c92a7579e2dfec0c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035697,\n            \"parent_catid\": 11035639,\n            \"name\": \"Maternity Wear\",\n            \"display_name\": \"Đồ Bầu\",\n            \"image\": \"961a28de30868c2354601fc4d744b2b1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035705,\n            \"parent_catid\": 11035639,\n            \"name\": \"Traditional Wear\",\n            \"display_name\": \"Đồ truyền thống\",\n            \"image\": \"51260e2a21eb3d6e0d0663778ecdc10d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035711,\n            \"parent_catid\": 11035639,\n            \"name\": \"Costumes\",\n            \"display_name\": \"Đồ hóa trang\",\n            \"image\": \"dfe3e251d609eecaae5be62396cabca7\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035713,\n            \"parent_catid\": 11035639,\n            \"name\": \"Fabric\",\n            \"display_name\": \"Vải\",\n            \"image\": \"8a1ef9d07e775060e91694508f7e7df2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035726,\n            \"parent_catid\": 11035639,\n            \"name\": \"Socks & Stockings\",\n            \"display_name\": \"Vớ/ Tất\",\n            \"image\": \"99ed0a3491b96d76407bd109d34a3945\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035712,\n            \"parent_catid\": 11035639,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"a643235aea2876af09815344de40dc6f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036030,\n        \"parent_catid\": 0,\n        \"name\": \"Mobile & Gadgets\",\n        \"display_name\": \"Điện Thoại & Phụ Kiện\",\n        \"image\": \"31234a27876fb89cd522d7e3db1ba5ca\",\n        \"unselected_image\": \"94fb4fb95a8598e8d31f0853f904c15b\",\n        \"selected_image\": \"070098d9b3cf1a1d35be2a6ef1bb3cd0\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036031,\n            \"parent_catid\": 11036030,\n            \"name\": \"Mobile Phones\",\n            \"display_name\": \"Điện thoại\",\n            \"image\": \"6eca5534f7e6588ca98921f3dd8977d8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036041,\n            \"parent_catid\": 11036030,\n            \"name\": \"Tablets\",\n            \"display_name\": \"Máy tính bảng\",\n            \"image\": \"70a6084a1868b12fe7b3019e4f5883d4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036048,\n            \"parent_catid\": 11036030,\n            \"name\": \"Powerbanks\",\n            \"display_name\": \"Pin Dự Phòng\",\n            \"image\": \"1057cf00838967399ec090e09e6ca1e5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036054,\n            \"parent_catid\": 11036030,\n            \"name\": \"Batteries, Cables & Charger\",\n            \"display_name\": \"Pin Gắn Trong, Cáp và Bộ Sạc\",\n            \"image\": \"f33482e0b6d7cc1016ffa6f05e37a073\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036060,\n            \"parent_catid\": 11036030,\n            \"name\": \"Cases, Covers, & Skins\",\n            \"display_name\": \"Ốp lưng, bao da, Miếng dán điện thoại\",\n            \"image\": \"0a3a54b287c4f6ff731216a302265c34\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036064,\n            \"parent_catid\": 11036030,\n            \"name\": \"Screen Protectors\",\n            \"display_name\": \"Bảo vệ màn hình\",\n            \"image\": \"f19bc122a374d195ab83a08d1317361c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036074,\n            \"parent_catid\": 11036030,\n            \"name\": \"Phone Holders\",\n            \"display_name\": \"Đế giữ điện thoại\",\n            \"image\": \"a3eaaf3586c9fd383032c5f78c20e1f5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036083,\n            \"parent_catid\": 11036030,\n            \"name\": \"Memory Cards\",\n            \"display_name\": \"Thẻ nhớ\",\n            \"image\": \"c6ac426ae524c13cc291fe06e211ddeb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036084,\n            \"parent_catid\": 11036030,\n            \"name\": \"Sims\",\n            \"display_name\": \"Sim\",\n            \"image\": \"825e9b8f1cb5df1ed6857c096fe8096f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036091,\n            \"parent_catid\": 11036030,\n            \"name\": \"Other Accessories\",\n            \"display_name\": \"Phụ kiện khác\",\n            \"image\": \"b3f14afb82207f6117e2d08bfa18cc6e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036097,\n            \"parent_catid\": 11036030,\n            \"name\": \"Other devices\",\n            \"display_name\": \"Thiết bị khác\",\n            \"image\": \"1c8aa9e43b5a03a99be82ba90bd53346\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036194,\n        \"parent_catid\": 0,\n        \"name\": \"Moms, Kids & Babies\",\n        \"display_name\": \"Mẹ & Bé\",\n        \"image\": \"099edde1ab31df35bc255912bab54a5e\",\n        \"unselected_image\": \"f91ae14aebd454762ab61136ebcec4e0\",\n        \"selected_image\": \"9b56c2810b51f8a017b76c3cefc84daf\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036195,\n            \"parent_catid\": 11036194,\n            \"name\": \"Baby Travel Essentials\",\n            \"display_name\": \"Đồ dùng du lịch cho bé\",\n            \"image\": \"b00214bbde1c76dd9118a9f2f0766759\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036204,\n            \"parent_catid\": 11036194,\n            \"name\": \"Feeding Essentials\",\n            \"display_name\": \"Đồ dùng ăn dặm cho bé\",\n            \"image\": \"d402cc89fb4e8bfe5a861e205e0deaa4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036213,\n            \"parent_catid\": 11036194,\n            \"name\": \"Maternity Accessories\",\n            \"display_name\": \"Phụ kiện cho mẹ\",\n            \"image\": \"26ea029f69775ded6a813a6fabfc009b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036217,\n            \"parent_catid\": 11036194,\n            \"name\": \"Maternity Healthcare\",\n            \"display_name\": \"Chăm sóc sức khỏe mẹ\",\n            \"image\": \"ed3955256306e2619c305530d6a87f94\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036222,\n            \"parent_catid\": 11036194,\n            \"name\": \"Bath & Body Care\",\n            \"display_name\": \"Đồ dùng phòng tắm & Chăm sóc cơ thể bé\",\n            \"image\": \"b47125a4cf4f94f5ddbc59b9227bc6c5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036233,\n            \"parent_catid\": 11036194,\n            \"name\": \"Nursery\",\n            \"display_name\": \"Đồ dùng phòng ngủ cho bé\",\n            \"image\": \"ecc2ec58fb29385a3e8648815ea8e0b6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036240,\n            \"parent_catid\": 11036194,\n            \"name\": \"Baby Safety\",\n            \"display_name\": \"An toàn cho bé\",\n            \"image\": \"7505b3703245155b566010d058d8e68e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036248,\n            \"parent_catid\": 11036194,\n            \"name\": \"Baby Food\",\n            \"display_name\": \"Thực phẩm cho bé\",\n            \"image\": \"733fc8cc2b84800e0ba5e61c244e5418\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036253,\n            \"parent_catid\": 11036194,\n            \"name\": \"Baby Healthcare\",\n            \"display_name\": \"Chăm sóc sức khỏe bé\",\n            \"image\": \"7f299998543d6acfd0cd2a5e525afadd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036260,\n            \"parent_catid\": 11036194,\n            \"name\": \"Diapering & Potty\",\n            \"display_name\": \"Tã & bô em bé\",\n            \"image\": \"7ab979da971f70ae322249903fc34720\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036266,\n            \"parent_catid\": 11036194,\n            \"name\": \"Toys\",\n            \"display_name\": \"Đồ chơi\",\n            \"image\": \"4b126234b32abb98ec6f710f8c9ea56b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036277,\n            \"parent_catid\": 11036194,\n            \"name\": \"Gift Sets & Packages\",\n            \"display_name\": \"Bộ & Gói quà tặng\",\n            \"image\": \"e3ca692da9341360a47ace28a8c46c0c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036278,\n            \"parent_catid\": 11036194,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"83487a1a34339a6f1a65b0c5df4d8cf4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11059299,\n            \"parent_catid\": 11036194,\n            \"name\": \"Milk 24 months and ups\",\n            \"display_name\": \"Sữa công thức trên 24 tháng\",\n            \"image\": \"e288ae38138761f10a63e5aab66627b7\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11059300,\n            \"parent_catid\": 11036194,\n            \"name\": \"Milk Formula 0- 24 months\",\n            \"display_name\": \"Sữa công thức 0-24 tháng tuổi\",\n            \"image\": \"436c1690e586542b835b11a5bf5f8291\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036132,\n        \"parent_catid\": 0,\n        \"name\": \"Consumer Electronics\",\n        \"display_name\": \"Thiết Bị Điện Tử\",\n        \"image\": \"978b9e4cb61c611aaaf58664fae133c5\",\n        \"unselected_image\": \"4a6a4d8230cf961e18636fbf91bad4b5\",\n        \"selected_image\": \"067bd7ff52bd0d3700d9b0af722e83c9\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036167,\n            \"parent_catid\": 11036132,\n            \"name\": \"Tivi Accessories\",\n            \"display_name\": \"Phụ kiện tivi\",\n            \"image\": \"01ad270503f331db0e9e50d786da5ac6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036172,\n            \"parent_catid\": 11036132,\n            \"name\": \"Gaming & Console\",\n            \"display_name\": \"Máy Game Console\",\n            \"image\": \"9455f1868243470f902109ca64e5b984\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036182,\n            \"parent_catid\": 11036132,\n            \"name\": \"Console Accessories\",\n            \"display_name\": \"Phụ kiện Console\",\n            \"image\": \"1725108461beb4e138e30faf0947021c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036184,\n            \"parent_catid\": 11036132,\n            \"name\": \"Video Games\",\n            \"display_name\": \"Đĩa game\",\n            \"image\": \"ab997b3f70e9b07f7eb07d184e888f49\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036133,\n            \"parent_catid\": 11036132,\n            \"name\": \"Accessories and spare parts\",\n            \"display_name\": \"Linh phụ kiện\",\n            \"image\": \"f9a05edc3bb84bca88086e72fbb741fb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036143,\n            \"parent_catid\": 11036132,\n            \"name\": \"Earphones\",\n            \"display_name\": \"Tai nghe nhét tai\",\n            \"image\": \"91b74e98a05d8a0e7c148b83ceb99c2d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036135,\n            \"parent_catid\": 11036132,\n            \"name\": \"Audio\",\n            \"display_name\": \"Loa\",\n            \"image\": \"e7765221252c934614aa7e830c8c9b54\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036151,\n            \"parent_catid\": 11036132,\n            \"name\": \"Tivi\",\n            \"display_name\": \"Tivi\",\n            \"image\": \"6111582fcd108674fbc2824599457fe5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036157,\n            \"parent_catid\": 11036132,\n            \"name\": \"Tivi Box\",\n            \"display_name\": \"Tivi Box\",\n            \"image\": \"ef6483fac1adb53e3f9e108b886fe341\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11109141,\n            \"parent_catid\": 11036132,\n            \"name\": \"Headphones\",\n            \"display_name\": \"Headphones\",\n            \"image\": \"53805fcb03b85d791e5f31eeb1d238eb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036670,\n        \"parent_catid\": 0,\n        \"name\": \"Home & Living\",\n        \"display_name\": \"Nhà Cửa & Đời Sống\",\n        \"image\": \"24b194a695ea59d384768b7b471d563f\",\n        \"unselected_image\": \"b4768dabefb27ea9c7729d503f954ce8\",\n        \"selected_image\": \"63dd94360f8ff81d83b9fa9ce9496381\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036683,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bedding\",\n            \"display_name\": \"Chăn, Ga, Gối & Nệm\",\n            \"image\": \"f733d34a4a4a26df73d8c8b667ba10f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036695,\n            \"parent_catid\": 11036670,\n            \"name\": \"Furniture\",\n            \"display_name\": \"Đồ nội thất\",\n            \"image\": \"63e036fd4763206d47274a8fe047d2cb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036717,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Decoration\",\n            \"display_name\": \"Trang trí nhà cửa\",\n            \"image\": \"837bdc29ef68c792e1ce93611c12d18b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036732,\n            \"parent_catid\": 11036670,\n            \"name\": \"Tools and Home improvement\",\n            \"display_name\": \"Dụng cụ & Thiết bị tiện ích\",\n            \"image\": \"bd689a49f06464140bc502fdc4eab1d8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036748,\n            \"parent_catid\": 11036670,\n            \"name\": \"Kitchenware and food storage\",\n            \"display_name\": \"Đồ dùng nhà bếp và hộp đựng thực phẩm\",\n            \"image\": \"4a3a18dbc4dfd8efb692ab3cb62a564d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036760,\n            \"parent_catid\": 11036670,\n            \"name\": \"Lighting\",\n            \"display_name\": \"Đèn\",\n            \"image\": \"d9f6d27597fff65b1feb69d77d041f97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036776,\n            \"parent_catid\": 11036670,\n            \"name\": \"Outdoor & Garden\",\n            \"display_name\": \"Ngoài trời & Sân vườn\",\n            \"image\": \"087fa5b9db94d57977725474e12be7e2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036671,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bathroom\",\n            \"display_name\": \"Đồ dùng phòng tắm\",\n            \"image\": \"9ebf742ff6713326045a2bd9e6ef0dfc\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111670,\n            \"parent_catid\": 11036670,\n            \"name\": \"Regilious and Worship items\",\n            \"display_name\": \"Vật phẩm thờ cúng\",\n            \"image\": \"eef4530088daacf1addde17d69a042fe\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111669,\n            \"parent_catid\": 11036670,\n            \"name\": \"Party supplies\",\n            \"display_name\": \"Đồ trang trí tiệc\",\n            \"image\": \"216f65e2d8a1aaa0a8943913c22913e6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111665,\n            \"parent_catid\": 11036670,\n            \"name\": \"Housekeeping and Laundry\",\n            \"display_name\": \"Chăm sóc nhà cửa và giặt ủi\",\n            \"image\": \"15d2f119c1232183e85b21dca668a7f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111668,\n            \"parent_catid\": 11036670,\n            \"name\": \"Houseorganizers\",\n            \"display_name\": \"Sắp xếp nhà cửa\",\n            \"image\": \"d8aca9bed91b3c9d339b4aa0d562dc2f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111666,\n            \"parent_catid\": 11036670,\n            \"name\": \"Drinkware\",\n            \"display_name\": \"Dụng cụ pha chế\",\n            \"image\": \"539e3d0cc0a4b801d7d377cbf403eb9a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111664,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Fragrance & Aromatherapy\",\n            \"display_name\": \"Tinh dầu thơm phòng\",\n            \"image\": \"55c0ca28f933ac7b09cf0964d77aef28\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111667,\n            \"parent_catid\": 11036670,\n            \"name\": \"Dinnerware\",\n            \"display_name\": \"Đồ dùng phòng ăn\",\n            \"image\": \"879b1c91f130b6af972e4d01904e1e97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035954,\n        \"parent_catid\": 0,\n        \"name\": \"Computer & Accessories\",\n        \"display_name\": \"Máy Tính & Laptop\",\n        \"image\": \"c3f3edfaa9f6dafc4825b77d8449999d\",\n        \"unselected_image\": \"688db8a2d094a46c612389f24af4dfd8\",\n        \"selected_image\": \"c5f9534c31bcaa89f36b644454c8771b\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035955,\n            \"parent_catid\": 11035954,\n            \"name\": \"Desktop Computers\",\n            \"display_name\": \"Máy Tính Bàn\",\n            \"image\": \"9ee23685d68971a04d18e3d82478ffd1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035961,\n            \"parent_catid\": 11035954,\n            \"name\": \"Monitors\",\n            \"display_name\": \"Màn Hình\",\n            \"image\": \"07eb6d1ec47997e879599f44faff9a32\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035962,\n            \"parent_catid\": 11035954,\n            \"name\": \"Desktop & Laptop Components\",\n            \"display_name\": \"Linh Kiện Máy Tính\",\n            \"image\": \"dda433781a2e4391d2bdde8165cdfddd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035975,\n            \"parent_catid\": 11035954,\n            \"name\": \"Data Storage\",\n            \"display_name\": \"Thiết Bị Lưu Trữ\",\n            \"image\": \"9152708928617686adbc9a257053411e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035983,\n            \"parent_catid\": 11035954,\n            \"name\": \"Network Components\",\n            \"display_name\": \"Thiết Bị Mạng\",\n            \"image\": \"d7eb886f608996afb8fb77f41f2c14f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035993,\n            \"parent_catid\": 11035954,\n            \"name\": \"Printers, Scanners & Projectors\",\n            \"display_name\": \"Máy In, Máy Scan & Máy Chiếu\",\n            \"image\": \"798c812646b1d72d16a988b7f854ca9d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036000,\n            \"parent_catid\": 11035954,\n            \"name\": \"Peripherals & Accessories\",\n            \"display_name\": \"Phụ Kiện Máy Tính\",\n            \"image\": \"31f547fdaf50b92c4cfe77d3b0b0a440\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036015,\n            \"parent_catid\": 11035954,\n            \"name\": \"Laptops\",\n            \"display_name\": \"Laptop\",\n            \"image\": \"90af01c1be8cd3e00c5f05ceb6851127\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036016,\n            \"parent_catid\": 11035954,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"b8fc994f4ed24f88e6c9cad70ce48da8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036023,\n            \"parent_catid\": 11035954,\n            \"name\": \"Gaming\",\n            \"display_name\": \"Gaming\",\n            \"image\": \"3bd8e8566c0e2f9eda4e2acd18f9f144\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036279,\n        \"parent_catid\": 0,\n        \"name\": \"Beauty & Personal Care\",\n        \"display_name\": \"Sắc Đẹp\",\n        \"image\": \"ef1f336ecc6f97b790d5aae9916dcb72\",\n        \"unselected_image\": \"5ea08600765192186cc1bb31ceb719f0\",\n        \"selected_image\": \"da035603628acbe11df1b6e757d96655\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036328,\n            \"parent_catid\": 11036279,\n            \"name\": \"Skincare\",\n            \"display_name\": \"Chăm sóc da mặt\",\n            \"image\": \"aa7a885342e375e15ee241065d3fcaf1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036280,\n            \"parent_catid\": 11036279,\n            \"name\": \"Bath & Body Care\",\n            \"display_name\": \"Tắm & chăm sóc cơ thể\",\n            \"image\": \"4f6604b9c4d752adc7761aed5a656080\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036314,\n            \"parent_catid\": 11036279,\n            \"name\": \"Makeup\",\n            \"display_name\": \"Trang điểm\",\n            \"image\": \"94243cb53223e425c8241f0d833e87fd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036297,\n            \"parent_catid\": 11036279,\n            \"name\": \"Hair Care\",\n            \"display_name\": \"Chăm sóc tóc\",\n            \"image\": \"8df57bc6ec6ee6dc67f8a482ede8ae57\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036321,\n            \"parent_catid\": 11036279,\n            \"name\": \"Beauty Tools & Accessories\",\n            \"display_name\": \"Dụng cụ & Phụ kiện Làm đẹp\",\n            \"image\": \"36c5cb7b9e25df4b8fde453691d7d357\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111646,\n            \"parent_catid\": 11036279,\n            \"name\": \"Oral Care\",\n            \"display_name\": \"Vệ sinh răng miệng\",\n            \"image\": \"2439afb78130c2788d37d26dd42c91fd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036310,\n            \"parent_catid\": 11036279,\n            \"name\": \"Perfumes & Fragrances\",\n            \"display_name\": \"Nước hoa\",\n            \"image\": \"1e86393fb01f47ec44036d941a962ad4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036304,\n            \"parent_catid\": 11036279,\n            \"name\": \"Men's Care\",\n            \"display_name\": \"Chăm sóc nam giới\",\n            \"image\": \"2df595fa1c9121b19b653258f6823ddc\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036344,\n            \"parent_catid\": 11036279,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"c901d864ef65c26758cfe5d2a30bfd66\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111647,\n            \"parent_catid\": 11036279,\n            \"name\": \"Feminine Care\",\n            \"display_name\": \"Chăm sóc phụ nữ\",\n            \"image\": \"66fef7da4c5b0405b4a641862794554c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036343,\n            \"parent_catid\": 11036279,\n            \"name\": \"Beauty Sets & Packages\",\n            \"display_name\": \"Bộ sản phẩm làm đẹp\",\n            \"image\": \"9c013765005212208ccc424c242c6eb8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036101,\n        \"parent_catid\": 0,\n        \"name\": \"Cameras\",\n        \"display_name\": \"Máy Ảnh & Máy Quay Phim\",\n        \"image\": \"ec14dd4fc238e676e43be2a911414d4d\",\n        \"unselected_image\": \"cad05553acc3e531f2dac3cac4fd1022\",\n        \"selected_image\": \"1117fe83f17d2f9ca76a5a632e12a793\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036102,\n            \"parent_catid\": 11036101,\n            \"name\": \"Cameras\",\n            \"display_name\": \"Máy ảnh - Máy quay phim\",\n            \"image\": \"f3fed6b55c5863b110dcb71c419821c4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036109,\n            \"parent_catid\": 11036101,\n            \"name\": \"Security Cameras & Systems\",\n            \"display_name\": \"Camera giám sát & Camera hệ thống\",\n            \"image\": \"ad1d22459e850c8e9de3c865d5152557\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036114,\n            \"parent_catid\": 11036101,\n            \"name\": \"Memory Cards\",\n            \"display_name\": \"Thẻ nhớ\",\n            \"image\": \"0604caa0e5ecc9afef27ef92a71502ce\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036115,\n            \"parent_catid\": 11036101,\n            \"name\": \"Lenses\",\n            \"display_name\": \"Ống kính\",\n            \"image\": \"66d1f2aea9679630005dc2b29d126fab\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036119,\n            \"parent_catid\": 11036101,\n            \"name\": \"Camera Accessories\",\n            \"display_name\": \"Phụ kiện máy ảnh\",\n            \"image\": \"d05acdce5034d0893a172aefb526a591\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036129,\n            \"parent_catid\": 11036101,\n            \"name\": \"Drones\",\n            \"display_name\": \"Máy bay camera & Phụ kiện\",\n            \"image\": \"74aa544f0c6e486a350f8c12e1c9b4b5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036345,\n        \"parent_catid\": 0,\n        \"name\": \"Health\",\n        \"display_name\": \"Sức Khỏe\",\n        \"image\": \"49119e891a44fa135f5f6f5fd4cfc747\",\n        \"unselected_image\": \"118b6d1eadc9777ae2feaf49d7c61726\",\n        \"selected_image\": \"347d4d500d1ac50d18ccddacacf26091\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036352,\n            \"parent_catid\": 11036345,\n            \"name\": \"Medical Supplies\",\n            \"display_name\": \"Vật tư y tế\",\n            \"image\": \"cc7eef683ea136e699f824045f2e1a8d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036373,\n            \"parent_catid\": 11036345,\n            \"name\": \"Insect Repellents\",\n            \"display_name\": \"Chống muỗi & xua đuổi côn trùng\",\n            \"image\": \"6d74d79a897a5651428166121e89b7d3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036346,\n            \"parent_catid\": 11036345,\n            \"name\": \"Food Supplement\",\n            \"display_name\": \"Thực phẩm chức năng\",\n            \"image\": \"c5e646fea2919e2aa09215f48babd356\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036370,\n            \"parent_catid\": 11036345,\n            \"name\": \"Adult Diapers & Incontinence\",\n            \"display_name\": \"Tã người lớn\",\n            \"image\": \"579bbc6df6b7c3768cff23cac2c0fae5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036348,\n            \"parent_catid\": 11036345,\n            \"name\": \"Beauty Supplements\",\n            \"display_name\": \"Hỗ trợ làm đẹp\",\n            \"image\": \"80b1706e12785e4cba5679c164f45979\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036375,\n            \"parent_catid\": 11036345,\n            \"name\": \"Sexual Wellness\",\n            \"display_name\": \"Hỗ trợ tình dục\",\n            \"image\": \"71753022762c763712f158978cf15980\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036372,\n            \"parent_catid\": 11036345,\n            \"name\": \"Massage & Therapy Devices\",\n            \"display_name\": \"Dụng cụ massage và trị liệu\",\n            \"image\": \"1932f19c5321a4b08066b078d54e8dc2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036381,\n            \"parent_catid\": 11036345,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"ddf51d955a33b900d050a09411df06c3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035788,\n        \"parent_catid\": 0,\n        \"name\": \"Watches\",\n        \"display_name\": \"Đồng Hồ\",\n        \"image\": \"86c294aae72ca1db5f541790f7796260\",\n        \"unselected_image\": \"56d77cda9b0208f3bec21f570d2e26c2\",\n        \"selected_image\": \"bbd89d8d0f95421cd4c790fd22dabaf0\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035789,\n            \"parent_catid\": 11035788,\n            \"name\": \"Men Watches\",\n            \"display_name\": \"Đồng Hồ Nam\",\n            \"image\": \"f8b6a574093d3d611972b857d2d825a8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035790,\n            \"parent_catid\": 11035788,\n            \"name\": \"Women Watches\",\n            \"display_name\": \"Đồng Hồ Nữ\",\n            \"image\": \"73716a6af1e3fb3b7ac538f1552e3459\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035791,\n            \"parent_catid\": 11035788,\n            \"name\": \"Set & Couple Watches\",\n            \"display_name\": \"Bộ Đồng Hồ & Đồng Hồ Cặp\",\n            \"image\": \"33dca0575037643e4bdf7eef68f529d5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035792,\n            \"parent_catid\": 11035788,\n            \"name\": \"Kid Watches\",\n            \"display_name\": \"Đồng Hồ Trẻ Em\",\n            \"image\": \"b70831e364fa46406d06cf2fe8b1daee\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035793,\n            \"parent_catid\": 11035788,\n            \"name\": \"Watches Accessories\",\n            \"display_name\": \"Phụ Kiện Đồng Hồ\",\n            \"image\": \"83977549d485afaf922b76173f11ca71\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035800,\n            \"parent_catid\": 11035788,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"5ff9ffb4d3dc6c2370a1655a39c8d75d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035825,\n        \"parent_catid\": 0,\n        \"name\": \"Women Shoes\",\n        \"display_name\": \"Giày Dép Nữ\",\n        \"image\": \"48630b7c76a7b62bc070c9e227097847\",\n        \"unselected_image\": \"95c7cfcab1857d1e356b506297c9e26e\",\n        \"selected_image\": \"6c654425dd4daba15ce423853813b689\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035826,\n            \"parent_catid\": 11035825,\n            \"name\": \"Boots\",\n            \"display_name\": \"Bốt\",\n            \"image\": \"970d1c56a7c1d09cd2e95f85ec18f595\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035830,\n            \"parent_catid\": 11035825,\n            \"name\": \"Sneakers\",\n            \"display_name\": \"Giày Thể Thao/ Sneaker\",\n            \"image\": \"bc6331e7a2e4abd287151dd1df37f11f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035831,\n            \"parent_catid\": 11035825,\n            \"name\": \"Flats\",\n            \"display_name\": \"Giày Đế Bằng\",\n            \"image\": \"241420cf60bafec79868e0b8cc09af99\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035837,\n            \"parent_catid\": 11035825,\n            \"name\": \"Heels\",\n            \"display_name\": \"Giày Cao Gót\",\n            \"image\": \"9808d9f92ed8885a37e60b587331d19c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035838,\n            \"parent_catid\": 11035825,\n            \"name\": \"Wedges\",\n            \"display_name\": \"Giày Đế Xuồng\",\n            \"image\": \"07e1b56386a2d1d6281876483ed70a96\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035839,\n            \"parent_catid\": 11035825,\n            \"name\": \"Flat Sandals & Flip Flops\",\n            \"display_name\": \"Xăng-đan Và Dép\",\n            \"image\": \"3b6226a4bcc5cb597d2ed67483fa9a62\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035845,\n            \"parent_catid\": 11035825,\n            \"name\": \"Shoe Care & Accessories\",\n            \"display_name\": \"Phụ Kiện Giày\",\n            \"image\": \"f8a085a9334c1bdecf747af57990f753\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035852,\n            \"parent_catid\": 11035825,\n            \"name\": \"Others\",\n            \"display_name\": \"Giày Khác\",\n            \"image\": \"e8937ee85035d988a7abcb1237ac5c26\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035801,\n        \"parent_catid\": 0,\n        \"name\": \"Men Shoes\",\n        \"display_name\": \"Giày Dép Nam\",\n        \"image\": \"74ca517e1fa74dc4d974e5d03c3139de\",\n        \"unselected_image\": \"5397917c0fc79a96797a97ad3f2ee59c\",\n        \"selected_image\": \"de1b3beb5a3aa573a9130fab9b4663da\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035802,\n            \"parent_catid\": 11035801,\n            \"name\": \"Boots\",\n            \"display_name\": \"Bốt\",\n            \"image\": \"0e5a56f1a7b76cc3a6152b9e7d333b14\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035807,\n            \"parent_catid\": 11035801,\n            \"name\": \"Sneakers\",\n            \"display_name\": \"Giày Thể Thao/ Sneakers\",\n            \"image\": \"32c907a1b9c70b50b4b263f1e7ef06c9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035808,\n            \"parent_catid\": 11035801,\n            \"name\": \"Slip Ons & Mules\",\n            \"display_name\": \"Giày Sục\",\n            \"image\": \"596a7bb65e29dc68e3118670103a7801\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035809,\n            \"parent_catid\": 11035801,\n            \"name\": \"Loafers & Boat Shoes\",\n            \"display_name\": \"Giày Tây Lười\",\n            \"image\": \"f1dfedbe7f20fb8f4f30c18fcf16777c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035810,\n            \"parent_catid\": 11035801,\n            \"name\": \"Oxfords & Lace-Ups\",\n            \"display_name\": \"Giày Oxfords & Giày Buộc Dây\",\n            \"image\": \"d6042e7cd99955276711971318be3907\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035811,\n            \"parent_catid\": 11035801,\n            \"name\": \"Sandals & Flip Flops\",\n            \"display_name\": \"Xăng-đan và Dép\",\n            \"image\": \"c47139e7c2d5528113ca6d8191860e5d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035817,\n            \"parent_catid\": 11035801,\n            \"name\": \"Shoe Care & Accessories\",\n            \"display_name\": \"Phụ kiện giày dép\",\n            \"image\": \"ee77a5926081272e8258ff805cec09f5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035824,\n            \"parent_catid\": 11035801,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"046f26674b99e8092133b99861ce9b9c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035761,\n        \"parent_catid\": 0,\n        \"name\": \"Women Bags\",\n        \"display_name\": \"Túi Ví Nữ\",\n        \"image\": \"fa6ada2555e8e51f369718bbc92ccc52\",\n        \"unselected_image\": \"fbb6eec19ab6feac776f7f8ca40dd89a\",\n        \"selected_image\": \"eda7c8905f68ff40890d13731f278de4\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035762,\n            \"parent_catid\": 11035761,\n            \"name\": \"Backpacks\",\n            \"display_name\": \"Ba Lô Nữ\",\n            \"image\": \"f2b5d42e62f7cf446cd4d7a0e9e2c36a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035763,\n            \"parent_catid\": 11035761,\n            \"name\": \"Laptop Bags\",\n            \"display_name\": \"Cặp Laptop\",\n            \"image\": \"3ba6d4afe11523c1f52eaad01d5bd539\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035768,\n            \"parent_catid\": 11035761,\n            \"name\": \"Clutches & Wristlets\",\n            \"display_name\": \"Ví Dự Tiệc & Ví Cầm Tay\",\n            \"image\": \"656b36de1018e82c860ee6cc4acb177d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035769,\n            \"parent_catid\": 11035761,\n            \"name\": \"Waist Bags & Chest Bags\",\n            \"display_name\": \"Túi Đeo Hông & Túi Đeo Ngực\",\n            \"image\": \"c68fc58b02e8dbb7915a45c612367640\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035770,\n            \"parent_catid\": 11035761,\n            \"name\": \"Tote Bags\",\n            \"display_name\": \"Túi Tote\",\n            \"image\": \"f528bbf0fd17dd78e2c13b8eebeda49f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035771,\n            \"parent_catid\": 11035761,\n            \"name\": \"Top-handle Bags\",\n            \"display_name\": \"Túi Quai Xách\",\n            \"image\": \"fc3b9b660d4fa2f39a5a70ee3a90f4f2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035772,\n            \"parent_catid\": 11035761,\n            \"name\": \"Crossbody & Shoulder Bags\",\n            \"display_name\": \"Túi Đeo Chéo & Túi Đeo Vai\",\n            \"image\": \"226ee0401864034e159243cba6f29e9d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035773,\n            \"parent_catid\": 11035761,\n            \"name\": \"Wallets\",\n            \"display_name\": \"Ví/Bóp Nữ\",\n            \"image\": \"c726baff1c853adad9963ffdb9bd3892\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035780,\n            \"parent_catid\": 11035761,\n            \"name\": \"Bag Accessories\",\n            \"display_name\": \"Phụ Kiện Túi\",\n            \"image\": \"1b64bdfe70910453cca3db255dc120f3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035787,\n            \"parent_catid\": 11035761,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"db1305c1bfbbe90c3e5507f46b39515c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036971,\n        \"parent_catid\": 0,\n        \"name\": \"Home Appliances\",\n        \"display_name\": \"Thiết Bị Điện Gia Dụng\",\n        \"image\": \"7abfbfee3c4844652b4a8245e473d857\",\n        \"unselected_image\": \"1fc1b537e2ed6321c2ebdf7eeba11ec1\",\n        \"selected_image\": \"65ff2e742e8e3466cbfbc6eff431fe9f\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036972,\n            \"parent_catid\": 11036971,\n            \"name\": \"Kitchen Appliances\",\n            \"display_name\": \"Đồ gia dụng nhà bếp\",\n            \"image\": \"6de47fc1f3a5f7c63e5b121132cc4403\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036990,\n            \"parent_catid\": 11036971,\n            \"name\": \"Large Appliance\",\n            \"display_name\": \"Đồ gia dụng lớn\",\n            \"image\": \"297c929e6c277332200d06db9bfd971b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11037000,\n            \"parent_catid\": 11036971,\n            \"name\": \"Vacuums & Floor care\",\n            \"display_name\": \"Máy hút bụi & Thiết bị làm sạch\",\n            \"image\": \"af21cea3fde669448568a4ec597927ac\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11037007,\n            \"parent_catid\": 11036971,\n            \"name\": \"Air Conditioners & Fans\",\n            \"display_name\": \"Quạt & Máy nóng lạnh\",\n            \"image\": \"c3d8f0dde1a3f650a2634dff6dfd45a6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11037016,\n            \"parent_catid\": 11036971,\n            \"name\": \"Garment Care\",\n            \"display_name\": \"Thiết bị chăm sóc quần áo\",\n            \"image\": \"91c2d5705f790dd5b3292214b982b3af\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11037023,\n            \"parent_catid\": 11036971,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"dfb36dfbf8854d4b8df92338048160b5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111623,\n            \"parent_catid\": 11036971,\n            \"name\": \"Blenders, Mixers & Grinders\",\n            \"display_name\": \"Máy xay, ép, máy đánh trứng trộn bột, máy xay thực phẩm\",\n            \"image\": \"e269c6b7fcac66704937a82a8de02bab\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111620,\n            \"parent_catid\": 11036971,\n            \"name\": \"Electric Cookers\",\n            \"display_name\": \"Bếp điện\",\n            \"image\": \"72aae3a24aa85ae5ac73373c368170c0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035853,\n        \"parent_catid\": 0,\n        \"name\": \"Fashion Accessories\",\n        \"display_name\": \"Phụ Kiện & Trang Sức Nữ\",\n        \"image\": \"8e71245b9659ea72c1b4e737be5cf42e\",\n        \"unselected_image\": \"1930d4de2b6cc845949c877114222564\",\n        \"selected_image\": \"a9b79913f2ae701618da858bf2b569ee\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035854,\n            \"parent_catid\": 11035853,\n            \"name\": \"Rings\",\n            \"display_name\": \"Nhẫn\",\n            \"image\": \"141c7ad68239e1b3e3a280967b963cc1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035855,\n            \"parent_catid\": 11035853,\n            \"name\": \"Earrings\",\n            \"display_name\": \"Bông tai\",\n            \"image\": \"d597db4812e28977c3d8d53456e21e1c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035856,\n            \"parent_catid\": 11035853,\n            \"name\": \"Scarves & Shawls\",\n            \"display_name\": \"Khăn choàng\",\n            \"image\": \"85c4cdd457e45a6170ea096fff6983a9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035857,\n            \"parent_catid\": 11035853,\n            \"name\": \"Gloves\",\n            \"display_name\": \"Găng tay\",\n            \"image\": \"43eabb77635a1c0f458c40c126b23369\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035858,\n            \"parent_catid\": 11035853,\n            \"name\": \"Hair Accessories\",\n            \"display_name\": \"Phụ kiện tóc\",\n            \"image\": \"f55d01008ef0628e978b8061f5330ac4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035865,\n            \"parent_catid\": 11035853,\n            \"name\": \"Bracelets & Bangles\",\n            \"display_name\": \"Vòng tay & Lắc tay\",\n            \"image\": \"966c7b041287a7d8730eecb8b1b01593\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035866,\n            \"parent_catid\": 11035853,\n            \"name\": \"Anklets\",\n            \"display_name\": \"Lắc chân\",\n            \"image\": \"1c923e0e2eb9606409451a6ecd37b5fe\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035867,\n            \"parent_catid\": 11035853,\n            \"name\": \"Hats & Caps\",\n            \"display_name\": \"Mũ\",\n            \"image\": \"5651f768d28242ce05b8e688861965e6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035868,\n            \"parent_catid\": 11035853,\n            \"name\": \"Necklaces\",\n            \"display_name\": \"Dây chuyền\",\n            \"image\": \"013db1d5c0b263d333165c0241995059\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035869,\n            \"parent_catid\": 11035853,\n            \"name\": \"Eyewear\",\n            \"display_name\": \"Kính mắt\",\n            \"image\": \"a93948c52d5bca7353f756b03cc4e463\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035874,\n            \"parent_catid\": 11035853,\n            \"name\": \"Investment Precious Metals\",\n            \"display_name\": \"Kim loại quý\",\n            \"image\": \"598cce98046f0b59a15a4f969bc4e91a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035880,\n            \"parent_catid\": 11035853,\n            \"name\": \"Belts\",\n            \"display_name\": \"Thắt lưng\",\n            \"image\": \"437efa41eda23201aeb6ddfea7477660\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035881,\n            \"parent_catid\": 11035853,\n            \"name\": \"Neckties, Bow Ties & Cravats\",\n            \"display_name\": \"Cà vạt & Nơ cổ\",\n            \"image\": \"94d5eac288e34fe20979723c9cd25348\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035882,\n            \"parent_catid\": 11035853,\n            \"name\": \"Additional Accessories\",\n            \"display_name\": \"Phụ kiện thêm\",\n            \"image\": \"22381a03b27fd7f5dbe526173506ddec\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035891,\n            \"parent_catid\": 11035853,\n            \"name\": \"Accessories Sets & Packages\",\n            \"display_name\": \"Bộ phụ kiện\",\n            \"image\": \"10314feb327e3efdde4eaed48b0501a0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035892,\n            \"parent_catid\": 11035853,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"f80b6f6dcdde34415405023c8a07a727\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035893,\n            \"parent_catid\": 11035853,\n            \"name\": \"Socks & Stockings\",\n            \"display_name\": \"Vớ/ Tất\",\n            \"image\": \"4b540845840c720a432bd589a6ea08c9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035897,\n            \"parent_catid\": 11035853,\n            \"name\": \"Umbrella\",\n            \"display_name\": \"Ô/Dù\",\n            \"image\": \"eed8e815f405304ebc487fd5222beb43\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035478,\n        \"parent_catid\": 0,\n        \"name\": \"Sport & Outdoor\",\n        \"display_name\": \"Thể Thao & Du Lịch\",\n        \"image\": \"6cb7e633f8b63757463b676bd19a50e4\",\n        \"unselected_image\": \"ee0535ee782827d3b77e3996692cec2d\",\n        \"selected_image\": \"f0c4060c01a9d91a9bc50c2dcb6154a8\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035479,\n            \"parent_catid\": 11035478,\n            \"name\": \"Luggage\",\n            \"display_name\": \"Vali\",\n            \"image\": \"ea260552a9f37122ea636a29117a347c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035487,\n            \"parent_catid\": 11035478,\n            \"name\": \"Travel Bags\",\n            \"display_name\": \"Túi du lịch\",\n            \"image\": \"ec442bb08d34b258a3e09fed3a48466e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035492,\n            \"parent_catid\": 11035478,\n            \"name\": \"Travel Accessories\",\n            \"display_name\": \"Phụ kiện du lịch\",\n            \"image\": \"e7bdb1c7d8d088ca2451cb178a92acfa\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035503,\n            \"parent_catid\": 11035478,\n            \"name\": \"Sports & Outdoor Recreation Equipments\",\n            \"display_name\": \"Dụng Cụ Thể Thao & Dã Ngoại\",\n            \"image\": \"ffa3e776dc5ffb4b519c30d79645819e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035531,\n            \"parent_catid\": 11035478,\n            \"name\": \"Sports Footwear\",\n            \"display_name\": \"Giày Thể Thao\",\n            \"image\": \"c1d30ac8f87bff3b1e78c2546f1014cf\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035543,\n            \"parent_catid\": 11035478,\n            \"name\": \"Sports & Outdoor Apparels\",\n            \"display_name\": \"Thời Trang Thể Thao & Dã Ngoại\",\n            \"image\": \"db31ccfb06839f449c592dcdbcb096bb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035553,\n            \"parent_catid\": 11035478,\n            \"name\": \"Sports & Outdoor Accessories\",\n            \"display_name\": \"Phụ Kiện Thể Thao & Dã Ngoại\",\n            \"image\": \"1509de3b43eea5b71f0e1660b099e3dd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035566,\n            \"parent_catid\": 11035478,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"f6bf8529a475580aafc2f7a31e3f248f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036525,\n        \"parent_catid\": 0,\n        \"name\": \"Grocery\",\n        \"display_name\": \"Bách Hóa Online\",\n        \"image\": \"c432168ee788f903f1ea024487f2c889\",\n        \"unselected_image\": \"d8518d1eb9ee0ac33c3fc99a2529b03b\",\n        \"selected_image\": \"fd6c15cc6a8963d2bc5b19f852d17c5e\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036532,\n            \"parent_catid\": 11036525,\n            \"name\": \"Snacks\",\n            \"display_name\": \"Đồ ăn vặt\",\n            \"image\": \"6a916b9d84dfd47d52e17aed6645a076\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036526,\n            \"parent_catid\": 11036525,\n            \"name\": \"Convenience / Ready-to-eat\",\n            \"display_name\": \"Đồ chế biến sẵn\",\n            \"image\": \"aa0f55b8dd843555821a5e64da3d68d6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036544,\n            \"parent_catid\": 11036525,\n            \"name\": \"Food Staples\",\n            \"display_name\": \"Nhu yếu phẩm\",\n            \"image\": \"299615d77f4012974184d589bd099b15\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036552,\n            \"parent_catid\": 11036525,\n            \"name\": \"Cooking Essentials\",\n            \"display_name\": \"Nguyên liệu nấu ăn\",\n            \"image\": \"e5d8eeb533af1e0ae66727348df591f2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036562,\n            \"parent_catid\": 11036525,\n            \"name\": \"Baking Needs\",\n            \"display_name\": \"Đồ làm bánh\",\n            \"image\": \"30509e0467d400b486eb64026d3583ee\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036591,\n            \"parent_catid\": 11036525,\n            \"name\": \"Dairy & Eggs\",\n            \"display_name\": \"Sữa - trứng\",\n            \"image\": \"8487ddb64e76a25095494464eea17a9b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036576,\n            \"parent_catid\": 11036525,\n            \"name\": \"Beverages\",\n            \"display_name\": \"Đồ uống\",\n            \"image\": \"772a0404ea3205802bb2baec6248c476\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036570,\n            \"parent_catid\": 11036525,\n            \"name\": \"Breakfast Cereals & Spread\",\n            \"display_name\": \"Ngũ cốc & mứt\",\n            \"image\": \"e0ce345bab5a1aac2fa1c924270192a2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036611,\n            \"parent_catid\": 11036525,\n            \"name\": \"Bakery\",\n            \"display_name\": \"Các loại bánh\",\n            \"image\": \"7cda1cf3ff845b14703e65368fb022a9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036616,\n            \"parent_catid\": 11036525,\n            \"name\": \"Alcoholic Beverages\",\n            \"display_name\": \"Đồ uống có cồn\",\n            \"image\": \"2b3ee36038127d0426aec7b0c3e0be1c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036622,\n            \"parent_catid\": 11036525,\n            \"name\": \"Gift Set & Hampers\",\n            \"display_name\": \"Bộ quà tặng\",\n            \"image\": \"df21ac643118cbdd17e82e9097fdc790\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036601,\n            \"parent_catid\": 11036525,\n            \"name\": \"Fresh & Frozen Food\",\n            \"display_name\": \"Thực phẩm tươi sống và thực phẩm đông lạnh\",\n            \"image\": \"2a517e74c84915df681d9d5078610007\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036623,\n            \"parent_catid\": 11036525,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"55b6c666831403eb9655d6aa7781aa3b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036793,\n        \"parent_catid\": 0,\n        \"name\": \"Automotive\",\n        \"display_name\": \"Ô Tô & Xe Máy & Xe Đạp\",\n        \"image\": \"3fb459e3449905545701b418e8220334\",\n        \"unselected_image\": \"1f24979b9bb6675e00b87a677389b480\",\n        \"selected_image\": \"c2eb7ffffdb93f6296cf85c7bec0c927\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036794,\n            \"parent_catid\": 11036793,\n            \"name\": \"Bike, E-bike\",\n            \"display_name\": \"Xe đạp, xe điện\",\n            \"image\": \"9eba588845ff073fa4d384b93ddf1902\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036804,\n            \"parent_catid\": 11036793,\n            \"name\": \"Motorbike\",\n            \"display_name\": \"Mô tô, xe máy\",\n            \"image\": \"12f22097cdfc2486d924d65a394a853b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036811,\n            \"parent_catid\": 11036793,\n            \"name\": \"Car\",\n            \"display_name\": \"Xe Ô tô\",\n            \"image\": \"20b181522d30b932d5e5f7464c9963db\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036817,\n            \"parent_catid\": 11036793,\n            \"name\": \"Helmets\",\n            \"display_name\": \"Mũ bảo hiểm\",\n            \"image\": \"085be40e2b8dc75355e3c2989df865e4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036824,\n            \"parent_catid\": 11036793,\n            \"name\": \"Motorbike Accessories\",\n            \"display_name\": \"Phụ kiện xe máy\",\n            \"image\": \"e66ab2f461bb17631d17062743e3a165\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036846,\n            \"parent_catid\": 11036793,\n            \"name\": \"Bicycle & E-bike Accessories\",\n            \"display_name\": \"Phụ kiện xe đạp\",\n            \"image\": \"66c339b238eb109e0890de4b5bf4bfb3\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108984,\n            \"parent_catid\": 11036793,\n            \"name\": \"Interior Accessories\",\n            \"display_name\": \"Phụ kiện bên trong ô tô\",\n            \"image\": \"045ac2bfedd4be67b473859ef9231b1e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108967,\n            \"parent_catid\": 11036793,\n            \"name\": \"Automotive Oils & Lubes\",\n            \"display_name\": \"Dầu nhớt & dầu nhờn\",\n            \"image\": \"7fe3105f630bc40205eb96c94b4338cb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11109015,\n            \"parent_catid\": 11036793,\n            \"name\": \"Auto Parts & Spares\",\n            \"display_name\": \"Phụ tùng ô tô\",\n            \"image\": \"de070238da398d417717d2fcdc1cc5aa\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108953,\n            \"parent_catid\": 11036793,\n            \"name\": \"Motorbike Spare Parts\",\n            \"display_name\": \"Phụ tùng xe máy\",\n            \"image\": \"9bd9fcdfbff327fbfd93b18e14c67327\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11109002,\n            \"parent_catid\": 11036793,\n            \"name\": \"Exterior Accessories\",\n            \"display_name\": \"Phụ kiện bên ngoài ô tô\",\n            \"image\": \"908c0a1dfa540a400fcd3aaba49b5bf7\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108974,\n            \"parent_catid\": 11036793,\n            \"name\": \"Automotive Care\",\n            \"display_name\": \"Chăm sóc ô tô\",\n            \"image\": \"274dfd55df9c9de27ef81ac1c1590235\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116267,\n            \"parent_catid\": 11036793,\n            \"name\": \"Automotive Services\",\n            \"display_name\": \"Dịch vụ cho xe\",\n            \"image\": \"5e8ca0f5dbd054427f0ac870c2d31c58\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036863,\n        \"parent_catid\": 0,\n        \"name\": \"Books & Stationery\",\n        \"display_name\": \"Nhà Sách Online\",\n        \"image\": \"36013311815c55d303b0e6c62d6a8139\",\n        \"unselected_image\": \"16018f8a6ecc494a2ebe109cba1e9a4e\",\n        \"selected_image\": \"8e1b2ed3e90b6630eb58166f23d3eb70\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11108503,\n            \"parent_catid\": 11036863,\n            \"name\": \"Domestic Books\",\n            \"display_name\": \"Sách Tiếng Việt\",\n            \"image\": \"b0ea7a5428f74709c5e48113bdee7a45\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108540,\n            \"parent_catid\": 11036863,\n            \"name\": \"Foreign Books\",\n            \"display_name\": \"Sách ngoại văn\",\n            \"image\": \"f3e8e17e794370f4568b51ea64a453f9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108576,\n            \"parent_catid\": 11036863,\n            \"name\": \"Gift & Wrapping\",\n            \"display_name\": \"Gói Quà\",\n            \"image\": \"db02d43c3a725b52836bdd505b6728b6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108584,\n            \"parent_catid\": 11036863,\n            \"name\": \"Writing & Correction\",\n            \"display_name\": \"Bút viết\",\n            \"image\": \"0bdecfec51ab4144ac63374fb713414c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108591,\n            \"parent_catid\": 11036863,\n            \"name\": \"School & Office Supplies\",\n            \"display_name\": \"Dụng cụ học sinh & văn phòng\",\n            \"image\": \"c19c80020e80f0793c75caf75c3070f1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108635,\n            \"parent_catid\": 11036863,\n            \"name\": \"Coloring & Arts\",\n            \"display_name\": \"Màu, Họa Cụ và Đồ Thủ Công\",\n            \"image\": \"40a22299069292d956ff926227c08f19\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108610,\n            \"parent_catid\": 11036863,\n            \"name\": \"Notebooks & Paper Products\",\n            \"display_name\": \"Sổ và Giấy Các Loại\",\n            \"image\": \"59a370de55b043c24935acd9a14f869f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036914,\n            \"parent_catid\": 11036863,\n            \"name\": \"Souvenirs\",\n            \"display_name\": \"Quà Lưu Niệm\",\n            \"image\": \"c5ee94357c6ea45b0265a9fe677a9a23\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11108624,\n            \"parent_catid\": 11036863,\n            \"name\": \"Music & Media\",\n            \"display_name\": \"Nhạc cụ và phụ kiện âm nhạc\",\n            \"image\": \"617101b45ca1034af2d35438c7fd375f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035741,\n        \"parent_catid\": 0,\n        \"name\": \"Men Bags\",\n        \"display_name\": \"Balo & Túi Ví Nam\",\n        \"image\": \"18fd9d878ad946db2f1bf4e33760c86f\",\n        \"unselected_image\": \"1f5e01250f659c1b7e1790e80d5fb05e\",\n        \"selected_image\": \"b3cb433e75a3f0aab069c80fb48280bd\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035742,\n            \"parent_catid\": 11035741,\n            \"name\": \"Backpacks\",\n            \"display_name\": \"Ba Lô Nam\",\n            \"image\": \"3261974daea361895df269cf1b2452f1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035743,\n            \"parent_catid\": 11035741,\n            \"name\": \"Laptop Backpacks\",\n            \"display_name\": \"Ba Lô Laptop Nam\",\n            \"image\": \"3a35b90c32c620272807ad2602c15121\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035744,\n            \"parent_catid\": 11035741,\n            \"name\": \"Laptop Bags & Cases\",\n            \"display_name\": \"Túi & Cặp Đựng Laptop\",\n            \"image\": \"6c8273f9f37908ad8c8337bfac89617b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035747,\n            \"parent_catid\": 11035741,\n            \"name\": \"Laptop Sleeves\",\n            \"display_name\": \"Túi Chống Sốc Laptop Nam\",\n            \"image\": \"2275e885d6f4501ce334737d3b96c195\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035748,\n            \"parent_catid\": 11035741,\n            \"name\": \"Tote Bags\",\n            \"display_name\": \"Túi Tote Nam\",\n            \"image\": \"8a1fcca022943a163ffe97ba7bca6e6a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035749,\n            \"parent_catid\": 11035741,\n            \"name\": \"Briefcases\",\n            \"display_name\": \"Cặp Xách Công Sở Nam\",\n            \"image\": \"3221d74f077d0a09d046ebaf57d1ef7f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035750,\n            \"parent_catid\": 11035741,\n            \"name\": \"Clutches\",\n            \"display_name\": \"Ví Cầm Tay Nam\",\n            \"image\": \"0f3375a7ddf10d0b71f2557436213bce\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035751,\n            \"parent_catid\": 11035741,\n            \"name\": \"Waist Bags & Chest Bags\",\n            \"display_name\": \"Túi Đeo Hông & Túi Đeo Ngực Nam\",\n            \"image\": \"399ff8955ab366d2c088c5ac61ea3787\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035752,\n            \"parent_catid\": 11035741,\n            \"name\": \"Crossbody & Shoulder Bags\",\n            \"display_name\": \"Túi Đeo Chéo Nam\",\n            \"image\": \"b2e96cc090445b775dd147a4b0cc6784\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035753,\n            \"parent_catid\": 11035741,\n            \"name\": \"Wallets\",\n            \"display_name\": \"Bóp/Ví Nam\",\n            \"image\": \"4b3a105fad22ca3d9a868312b34fbaf1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035760,\n            \"parent_catid\": 11035741,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"35eaa9bee2302fafe81d96178b14100a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036382,\n        \"parent_catid\": 0,\n        \"name\": \"Kid Fashion\",\n        \"display_name\": \"Thời Trang Trẻ Em\",\n        \"image\": \"4540f87aa3cbe99db739f9e8dd2cdaf0\",\n        \"unselected_image\": \"b8ddeedbfc01d8220d724f2c18cf952b\",\n        \"selected_image\": \"d8374906ec15e1f44db297ea4cf1f26f\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036418,\n            \"parent_catid\": 11036382,\n            \"name\": \"Boy Clothes\",\n            \"display_name\": \"Trang phục bé trai\",\n            \"image\": \"442309de4f1bdc2dea649cc7d7f2922c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036438,\n            \"parent_catid\": 11036382,\n            \"name\": \"Girl Clothes\",\n            \"display_name\": \"Trang phục bé gái\",\n            \"image\": \"86c84665e3f77fe41aa65782202d1804\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036461,\n            \"parent_catid\": 11036382,\n            \"name\": \"Boy Shoes\",\n            \"display_name\": \"Giày dép bé trai\",\n            \"image\": \"5410fc433223a804e31adfb6a2d761ff\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036469,\n            \"parent_catid\": 11036382,\n            \"name\": \"Girl Shoes\",\n            \"display_name\": \"Giày dép bé gái\",\n            \"image\": \"7fe047df98ce20f2b4baff33798fb7d5\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036477,\n            \"parent_catid\": 11036382,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"55b9b2b5bea2b656ce1298f351284195\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036383,\n            \"parent_catid\": 11036382,\n            \"name\": \"Baby Clothes\",\n            \"display_name\": \"Quần áo em bé\",\n            \"image\": \"259a34b30f088356dd393e50cc339c57\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036396,\n            \"parent_catid\": 11036382,\n            \"name\": \"Baby Mittens & Footwear\",\n            \"display_name\": \"Giày tập đi & Tất sơ sinh\",\n            \"image\": \"e5c0d22e5a0703f298e554e3d4a51d22\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036397,\n            \"parent_catid\": 11036382,\n            \"name\": \"Baby & Kids Accessories\",\n            \"display_name\": \"Phụ kiện trẻ em\",\n            \"image\": \"252cf0ea0e3713e03aeca4e3e74482f1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036932,\n        \"parent_catid\": 0,\n        \"name\": \"Toys\",\n        \"display_name\": \"Đồ Chơi\",\n        \"image\": \"ce8f8abc726cafff671d0e5311caa684\",\n        \"unselected_image\": \"dcaf4ddf25237dada21919de3a793997\",\n        \"selected_image\": \"afce35fc8b0190a75573ed6720feb0f2\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036933,\n            \"parent_catid\": 11036932,\n            \"name\": \"Hobbies & Collectibles\",\n            \"display_name\": \"Sở thích & Sưu tầm\",\n            \"image\": \"2aa3bdffdcb16ae63ccbef60c6ce13a6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036939,\n            \"parent_catid\": 11036932,\n            \"name\": \"Game Zone\",\n            \"display_name\": \"Đồ chơi giải trí\",\n            \"image\": \"4d10f34faaef7987b7aa4f6c3e64b1fb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036946,\n            \"parent_catid\": 11036932,\n            \"name\": \"Educational Toys\",\n            \"display_name\": \"Đồ chơi giáo dục\",\n            \"image\": \"de7fd24ef0e894da4cb1761c75934611\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036954,\n            \"parent_catid\": 11036932,\n            \"name\": \"Baby & Toddler Toys\",\n            \"display_name\": \"Đồ chơi cho trẻ sơ sinh & trẻ nhỏ\",\n            \"image\": \"f965229d351717c4f5ccacabbd576e1c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036960,\n            \"parent_catid\": 11036932,\n            \"name\": \"Action & Outdoor Toys\",\n            \"display_name\": \"Đồ chơi vận động & ngoài trời\",\n            \"image\": \"25779cc2ea10f0b0a547aebd03ae9188\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036966,\n            \"parent_catid\": 11036932,\n            \"name\": \"Dolls & Stuffed Toys\",\n            \"display_name\": \"Búp bê & Đồ chơi nhồi bông\",\n            \"image\": \"db2b3b2cbba455997fc7a02374d399a7\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036624,\n        \"parent_catid\": 0,\n        \"name\": \"Home care\",\n        \"display_name\": \"Giặt Giũ & Chăm Sóc Nhà Cửa\",\n        \"image\": \"cd8e0d2e6c14c4904058ae20821d0763\",\n        \"unselected_image\": \"90620cf8cc077ae609edf755bf1642ef\",\n        \"selected_image\": \"0c76703bc8f67211d48ed8eee8d40397\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036625,\n            \"parent_catid\": 11036624,\n            \"name\": \"Laundry\",\n            \"display_name\": \"Giặt giũ & Chăm sóc nhà cửa\",\n            \"image\": \"efd8413bc4f66755671036fbefe993a9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036634,\n            \"parent_catid\": 11036624,\n            \"name\": \"Toilet Paper\",\n            \"display_name\": \"Giấy vệ sinh, khăn giấy\",\n            \"image\": \"f51ffcf198ab7fbc5053eaf5db94b88c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036639,\n            \"parent_catid\": 11036624,\n            \"name\": \"Household Cleaning\",\n            \"display_name\": \"Vệ sinh nhà cửa\",\n            \"image\": \"007e188dd263ae5f336771b79c94ab13\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036647,\n            \"parent_catid\": 11036624,\n            \"name\": \"Dishwashing\",\n            \"display_name\": \"Vệ sinh bát đĩa\",\n            \"image\": \"284e7c48e09adbb998dc1e2c52ad400a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036649,\n            \"parent_catid\": 11036624,\n            \"name\": \"Cleaning Tools\",\n            \"display_name\": \"Dụng cụ vệ sinh\",\n            \"image\": \"7f64b16f8fbc4854c5e003435b9602ae\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036654,\n            \"parent_catid\": 11036624,\n            \"name\": \"Air Fresheners\",\n            \"display_name\": \"Chất khử mùi, làm thơm\",\n            \"image\": \"eb492afed24081599f13aa23f44bce12\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036660,\n            \"parent_catid\": 11036624,\n            \"name\": \"Insect Killer\",\n            \"display_name\": \"Thuốc diệt côn trùng\",\n            \"image\": \"e42180830be8f28088d6068c6f76c6b8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036664,\n            \"parent_catid\": 11036624,\n            \"name\": \"Food preservation\",\n            \"display_name\": \"Túi, màng bọc thực phẩm\",\n            \"image\": \"a3c63c11683868f12e7546b722763372\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036668,\n            \"parent_catid\": 11036624,\n            \"name\": \"Trash Bags\",\n            \"display_name\": \"Bao bì, túi đựng rác\",\n            \"image\": \"7ad4a27ebc3838c365cd50d144f51002\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11036478,\n        \"parent_catid\": 0,\n        \"name\": \"Pets\",\n        \"display_name\": \"Chăm Sóc Thú Cưng\",\n        \"image\": \"cdf21b1bf4bfff257efe29054ecea1ec\",\n        \"unselected_image\": \"ff60a2f3ce61b7203efcd84ca2f11c6f\",\n        \"selected_image\": \"3ac5b4f5c0585510919245b8836cc8e2\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036479,\n            \"parent_catid\": 11036478,\n            \"name\": \"Pet Food\",\n            \"display_name\": \"Thức ăn cho thú cưng\",\n            \"image\": \"1f4ecf5cbd05ac1ee06a4be19e24f880\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036490,\n            \"parent_catid\": 11036478,\n            \"name\": \"Pet Accessories\",\n            \"display_name\": \"Phụ kiện cho thú cưng\",\n            \"image\": \"379271c2d983f2c16ef41b7f8b564415\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036498,\n            \"parent_catid\": 11036478,\n            \"name\": \"Litter & Toilet\",\n            \"display_name\": \"Vệ sinh cho thú cưng\",\n            \"image\": \"b2c05b4fa41fc65e5aab1b55f59adf0c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036510,\n            \"parent_catid\": 11036478,\n            \"name\": \"Pet Clothing & Accessories\",\n            \"display_name\": \"Quần áo thú cưng\",\n            \"image\": \"d6d6137d38d917511cb1ebc89d03f8ca\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036519,\n            \"parent_catid\": 11036478,\n            \"name\": \"Pet Healthcare\",\n            \"display_name\": \"Chăm sóc sức khỏe\",\n            \"image\": \"ce7baeab34604200b0ab12d2b17cf52f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116223,\n            \"parent_catid\": 11036478,\n            \"name\": \"Pet Grooming\",\n            \"display_name\": \"Làm đẹp cho thú cưng\",\n            \"image\": \"32c6df2d02d238f7c4899f7af16fb4b2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036524,\n            \"parent_catid\": 11036478,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"998d0fc4b808406657d4b95b53eb1c04\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11035898,\n        \"parent_catid\": 0,\n        \"name\": \"Tickets, Vouchers & Services\",\n        \"display_name\": \"Voucher & Dịch Vụ\",\n        \"image\": \"b0f78c3136d2d78d49af71dd1c3f38c1\",\n        \"unselected_image\": \"72ac9e8fa774d1b66f1390e3a4c564fe\",\n        \"selected_image\": \"d56374d76af80ef9e91bc95c1906d12d\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11035905,\n            \"parent_catid\": 11035898,\n            \"name\": \"F&B\",\n            \"display_name\": \"Nhà hàng & Ăn uống\",\n            \"image\": \"093fda5d8f004b041e956b068a724f16\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035899,\n            \"parent_catid\": 11035898,\n            \"name\": \"Events & Attractions\",\n            \"display_name\": \"Sự kiện & Giải trí\",\n            \"image\": \"f9a15d23a1bcefcfed2b9de61aeccab1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035931,\n            \"parent_catid\": 11035898,\n            \"name\": \"Telco\",\n            \"display_name\": \"Nạp tiền tài khoản\",\n            \"image\": \"59c4f9c996eb1f96198a36f104431e88\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": [\n              1,\n              2\n            ]\n          },\n          {\n            \"catid\": 11035922,\n            \"parent_catid\": 11035898,\n            \"name\": \"Beauty & Wellness\",\n            \"display_name\": \"Sức khỏe & Làm đẹp\",\n            \"image\": \"1b734a1b353460b284aa740f80871fcb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035929,\n            \"parent_catid\": 11035898,\n            \"name\": \"Transport\",\n            \"display_name\": \"Gọi xe\",\n            \"image\": \"2c9bd264d89d2b8aba183814f53ed545\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035930,\n            \"parent_catid\": 11035898,\n            \"name\": \"Lessons & Workshops\",\n            \"display_name\": \"Khóa học\",\n            \"image\": \"87595e935bbc6e436afba0a83b8e18d0\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035936,\n            \"parent_catid\": 11035898,\n            \"name\": \"Travel\",\n            \"display_name\": \"Du lịch & Khách sạn\",\n            \"image\": \"8b57fa895a34ed7772a7e50bd5ae6142\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035909,\n            \"parent_catid\": 11035898,\n            \"name\": \"Shopping\",\n            \"display_name\": \"Mua sắm\",\n            \"image\": \"7656175c75f5f62ce82e1b526083b80e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035949,\n            \"parent_catid\": 11035898,\n            \"name\": \"Shopee\",\n            \"display_name\": \"Mã quà tặng Shopee\",\n            \"image\": \"d033ba5e567a2c1559de88dac94719da\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035913,\n            \"parent_catid\": 11035898,\n            \"name\": \"Utilities\",\n            \"display_name\": \"Thanh toán hóa đơn\",\n            \"image\": \"c50a8983a31f5c9aed8d876403db12b9\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11035914,\n            \"parent_catid\": 11035898,\n            \"name\": \"Services\",\n            \"display_name\": \"Dịch vụ khác\",\n            \"image\": \"680c03454d4a8e6510cde78faa437224\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      },\n      {\n        \"catid\": 11116484,\n        \"parent_catid\": 0,\n        \"name\": \"Tools & Home Improvement\",\n        \"display_name\": \"Dụng cụ và thiết bị tiện ích\",\n        \"image\": \"e4fbccba5e1189d1141b9d6188af79c0\",\n        \"unselected_image\": \"71ac922267b4f6aab51dc670888bfa79\",\n        \"selected_image\": \"e1d2734b06a8163c79c47f05376de22d\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11116487,\n            \"parent_catid\": 11116484,\n            \"name\": \"Handtool\",\n            \"display_name\": \"Dụng cụ cầm tay\",\n            \"image\": \"e5bbe88d50fa708aaabf6bab0a6641b2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116485,\n            \"parent_catid\": 11116484,\n            \"name\": \"Large tools and equipment\",\n            \"display_name\": \"Dụng cụ điện và thiết bị lớn\",\n            \"image\": \"4e2ddf616cedf5f1f5e5439976adb33e\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116489,\n            \"parent_catid\": 11116484,\n            \"name\": \"Electrical Circuitry & Parts\",\n            \"display_name\": \"Thiết bị mạch điện\",\n            \"image\": \"eb200b37152ed3e6b0dcbb8169536f90\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116488,\n            \"parent_catid\": 11116484,\n            \"name\": \"Building and construction\",\n            \"display_name\": \"Vật liệu xây dựng\",\n            \"image\": \"985efb4f0eadd25649b1f6ae1efcb371\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11116486,\n            \"parent_catid\": 11116484,\n            \"name\": \"Accessories\",\n            \"display_name\": \"Thiết bị và phụ kiện xây dựng\",\n            \"image\": \"7605a30bf19b0fceb4a01863d4188a40\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      }\n    ],\n    \"just_for_you_data\": {\n      \"enable_just_for_you\": false,\n      \"category\": null\n    }\n  },\n  \"error\": 0,\n  \"error_msg\": \"\"\n}",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetParent",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1560.0,
+        "y" : -360.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"catid\": \"&\",\n      \"name\": \"&\",\n      \"level\":\"&\"\n    }\n    }\n\n]\n"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetChild",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1552.0,
+        "y" : -8.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"category_list\": {\n          \"*\": {\n            \"catid\": \"[&1].catid\",\n            \"display_name\": \"[&1].name\",\n            \"level\": \"[&1].level\",\n            \"children\": \"[&1].children\"\n          }\n        }\n      }\n    }\n  }\n]\n"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "SplitJson",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 848.0,
+        "y" : -144.0
+      },
+      "properties" : {
+        "Max String Length" : "20 MB",
+        "Null Value Representation" : "empty string",
+        "JsonPath Expression" : "$.[*]"
+      },
+      "propertyDescriptors" : {
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "JsonPath Expression" : {
+          "displayName" : "JsonPath Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JsonPath Expression",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.SplitJson",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "category-flow",
+    "timestamp" : 0
+  }
 }
