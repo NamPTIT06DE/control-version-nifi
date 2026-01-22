@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1769073476250,
+    "description" : "",
+    "identifier" : "pipeline-shopee",
+    "lastModifiedTimestamp" : 1769073476250,
+    "name" : "pipeline-shopee",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
