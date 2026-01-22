@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1769081009818,
     "description" : "",
@@ -7,5 +8,69 @@
     "name" : "review-flow",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Parse_Review",
+    "outputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "035cd9aa-81df-3757-8568-9e2197da2194",
+      "name" : "push_dataDB",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -119.99991969079224,
+        "y" : 136.0000416792418
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    }, {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3b73ab84-b114-33c6-ac49-9c3d2f2408f2",
+      "name" : "push_url_kafka",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -119.99991969079224,
+        "y" : -183.9999583207582
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    } ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "review-flow",
+    "timestamp" : 0
+  }
 }
