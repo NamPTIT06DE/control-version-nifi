@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1769081036462,
+    "description" : "",
+    "identifier" : "push-url-kafka-flow",
+    "lastModifiedTimestamp" : 1769081036462,
+    "name" : "push-url-kafka-flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
