@@ -428,8 +428,8 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "5b127cc0-9ae0-3968-a190-7ec3f1ce3730",
       "position" : {
-        "x" : 3568.0,
-        "y" : 576.0
+        "x" : 3560.0,
+        "y" : 568.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -650,7 +650,7 @@
         "bucketId" : "default",
         "flowId" : "category-flow",
         "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "db4308d4417acf9588f7ec51989ef152956f2f42"
+        "version" : "e760c44137593064667ca0135320b4ad95d7114f"
       }
     } ],
     "processors" : [ {
