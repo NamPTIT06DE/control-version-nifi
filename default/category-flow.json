@@ -49,79 +49,20 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
-        "name" : "GetChild",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "c0fb56ef-e0df-3234-bb61-06b75252ffab",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "original", "split" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+        "id" : "f8e1d721-6440-344b-9a93-b02b024e6e51",
         "name" : "SplitJson",
         "type" : "PROCESSOR"
       },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "groupId" : "flow-contents-group",
-        "id" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
-        "name" : "push_dataDB",
-        "type" : "OUTPUT_PORT"
-      },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "1bc58e8f-d275-3f09-a77f-e4be8e7f0761",
+      "identifier" : "36d7e125-e4a9-3ad2-ac46-7ba0fe3fd4fd",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "654536ba-bc80-372a-8860-807878f0913d",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
-        "name" : "GetParent",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "1cdd4ea3-c167-366e-9c06-f498a226e748",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "original", "split" ],
+      "selectedRelationships" : [ "split" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
@@ -279,6 +220,125 @@
         "type" : "FUNNEL"
       },
       "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
+        "name" : "GetChild",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "00ad2ef7-3d83-3839-b44c-e5fb4543328f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f8e1d721-6440-344b-9a93-b02b024e6e51",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
+        "name" : "push_dataDB",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "16ec0981-d27e-370d-b56b-5e06507a3d8c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
+        "name" : "GetParent",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b1e9441b-efe5-3811-aaf2-dc4e46c10f3d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f893d968-639a-3032-a84e-b18a96b7b284",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "54d652c2-b3f3-3b15-89ef-e1144e044d6e",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "5ca20e47-3588-3210-a9dc-b48891048ed2",
+        "name" : "GenerateFlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -337,6 +397,65 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f8e1d721-6440-344b-9a93-b02b024e6e51",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "SplitJson",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 848.0,
+        "y" : 168.0
+      },
+      "properties" : {
+        "Max String Length" : "20 MB",
+        "Null Value Representation" : "empty string",
+        "JsonPath Expression" : "$.children.[*]"
+      },
+      "propertyDescriptors" : {
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "JsonPath Expression" : {
+          "displayName" : "JsonPath Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JsonPath Expression",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.SplitJson",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -715,7 +834,7 @@
         "Max String Length" : "20 MB",
         "Transform Cache Size" : "1",
         "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"category_list\": {\n          \"*\": {\n            \"catid\": \"[&1].catid\",\n            \"display_name\": \"[&1].name\",\n            \"level\": \"[&1].level\",\n            \"children\": \"[&1].children\"\n          }\n        }\n      }\n    }\n  }\n]\n"
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"children\": {\n        \"*\": {\n          \"catid\": \"[&1].&\",\n          \"parent_catid\": \"[&1].&\",\n          \"display_name\": \"[&1].&\",\n          \"level\": \"[&1].&\"\n        }\n      }\n    }\n  }\n]\n"
       },
       "propertyDescriptors" : {
         "Jolt Transform" : {
@@ -786,7 +905,97 @@
       "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "failure" ],
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5ca20e47-3588-3210-a9dc-b48891048ed2",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GenerateFlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -440.0,
+        "y" : 160.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "{\n  \"data\": {\n    \"category_list\": [\n      {\n        \"catid\": 11036670,\n        \"parent_catid\": 0,\n        \"name\": \"Home & Living\",\n        \"display_name\": \"Nhà Cửa & Đời Sống\",\n        \"image\": \"24b194a695ea59d384768b7b471d563f\",\n        \"unselected_image\": \"b4768dabefb27ea9c7729d503f954ce8\",\n        \"selected_image\": \"63dd94360f8ff81d83b9fa9ce9496381\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036683,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bedding\",\n            \"display_name\": \"Chăn, Ga, Gối & Nệm\",\n            \"image\": \"f733d34a4a4a26df73d8c8b667ba10f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036695,\n            \"parent_catid\": 11036670,\n            \"name\": \"Furniture\",\n            \"display_name\": \"Đồ nội thất\",\n            \"image\": \"63e036fd4763206d47274a8fe047d2cb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036717,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Decoration\",\n            \"display_name\": \"Trang trí nhà cửa\",\n            \"image\": \"837bdc29ef68c792e1ce93611c12d18b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036732,\n            \"parent_catid\": 11036670,\n            \"name\": \"Tools and Home improvement\",\n            \"display_name\": \"Dụng cụ & Thiết bị tiện ích\",\n            \"image\": \"bd689a49f06464140bc502fdc4eab1d8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036748,\n            \"parent_catid\": 11036670,\n            \"name\": \"Kitchenware and food storage\",\n            \"display_name\": \"Đồ dùng nhà bếp và hộp đựng thực phẩm\",\n            \"image\": \"4a3a18dbc4dfd8efb692ab3cb62a564d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036760,\n            \"parent_catid\": 11036670,\n            \"name\": \"Lighting\",\n            \"display_name\": \"Đèn\",\n            \"image\": \"d9f6d27597fff65b1feb69d77d041f97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036776,\n            \"parent_catid\": 11036670,\n            \"name\": \"Outdoor & Garden\",\n            \"display_name\": \"Ngoài trời & Sân vườn\",\n            \"image\": \"087fa5b9db94d57977725474e12be7e2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036671,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bathroom\",\n            \"display_name\": \"Đồ dùng phòng tắm\",\n            \"image\": \"9ebf742ff6713326045a2bd9e6ef0dfc\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111670,\n            \"parent_catid\": 11036670,\n            \"name\": \"Regilious and Worship items\",\n            \"display_name\": \"Vật phẩm thờ cúng\",\n            \"image\": \"eef4530088daacf1addde17d69a042fe\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111669,\n            \"parent_catid\": 11036670,\n            \"name\": \"Party supplies\",\n            \"display_name\": \"Đồ trang trí tiệc\",\n            \"image\": \"216f65e2d8a1aaa0a8943913c22913e6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111665,\n            \"parent_catid\": 11036670,\n            \"name\": \"Housekeeping and Laundry\",\n            \"display_name\": \"Chăm sóc nhà cửa và giặt ủi\",\n            \"image\": \"15d2f119c1232183e85b21dca668a7f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111668,\n            \"parent_catid\": 11036670,\n            \"name\": \"Houseorganizers\",\n            \"display_name\": \"Sắp xếp nhà cửa\",\n            \"image\": \"d8aca9bed91b3c9d339b4aa0d562dc2f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111666,\n            \"parent_catid\": 11036670,\n            \"name\": \"Drinkware\",\n            \"display_name\": \"Dụng cụ pha chế\",\n            \"image\": \"539e3d0cc0a4b801d7d377cbf403eb9a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111664,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Fragrance & Aromatherapy\",\n            \"display_name\": \"Tinh dầu thơm phòng\",\n            \"image\": \"55c0ca28f933ac7b09cf0964d77aef28\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111667,\n            \"parent_catid\": 11036670,\n            \"name\": \"Dinnerware\",\n            \"display_name\": \"Đồ dùng phòng ăn\",\n            \"image\": \"879b1c91f130b6af972e4d01904e1e97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      }\n    ],\n    \"just_for_you_data\": {\n      \"enable_just_for_you\": false,\n      \"category\": null\n    }\n  },\n  \"error\": 0,\n  \"error_msg\": \"\"\n}",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -805,7 +1014,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 848.0,
-        "y" : -144.0
+        "y" : -152.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
