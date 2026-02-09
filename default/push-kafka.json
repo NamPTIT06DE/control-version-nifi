@@ -1,5 +1,10 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "b2593cab-ebc9-3c2f-b43d-0f9374460216" : {
+      "identifier" : "b2593cab-ebc9-3c2f-b43d-0f9374460216",
+      "name" : "Kafka3ConnectionService"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1769081119854,
     "description" : "",
@@ -11,13 +16,77 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "ccc23d74-a965-375e-999f-8339a9043dc6",
+        "name" : "PublishKafka",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "011319f1-6f3b-3c23-ba4b-626286f90212",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "41c1c5d3-0e74-3ae3-90fa-7837180328d5",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "41c1c5d3-0e74-3ae3-90fa-7837180328d5",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8b02f655-3e7e-32d7-a756-e175ceb30932",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "7cf6a071-51a2-3bb6-97c7-f1a81d3e44b6",
+        "name" : "Input",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "b2593cab-ebc9-3c2f-b43d-0f9374460216" : {
+        "identifier" : "b2593cab-ebc9-3c2f-b43d-0f9374460216",
+        "name" : "Kafka3ConnectionService"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -31,8 +100,8 @@
       "name" : "Input",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -389.0000272903344,
-        "y" : -133.50000042842743
+        "x" : -304.0,
+        "y" : -152.0
       },
       "scheduledState" : "ENABLED",
       "type" : "INPUT_PORT"
@@ -46,7 +115,274 @@
       "y" : 0.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-kafka-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ccc23d74-a965-375e-999f-8339a9043dc6",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PublishKafka",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 968.0,
+        "y" : -176.0
+      },
+      "properties" : {
+        "compression.type" : "none",
+        "acks" : "all",
+        "Kafka Key Attribute Encoding" : "utf-8",
+        "Record Metadata Strategy" : "FROM_PROPERTIES",
+        "Header Encoding" : "UTF-8",
+        "max.request.size" : "1 MB",
+        "Topic Name" : "url_daily",
+        "Kafka Connection Service" : "b2593cab-ebc9-3c2f-b43d-0f9374460216",
+        "Publish Strategy" : "USE_VALUE",
+        "Failure Strategy" : "Route to Failure",
+        "partitioner.class" : "org.apache.nifi.processors.kafka.pubsub.Partitioners.RoundRobinPartitioner",
+        "Transactions Enabled" : "true"
+      },
+      "propertyDescriptors" : {
+        "compression.type" : {
+          "displayName" : "Compression Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "compression.type",
+          "sensitive" : false
+        },
+        "acks" : {
+          "displayName" : "Delivery Guarantee",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "acks",
+          "sensitive" : false
+        },
+        "Message Demarcator" : {
+          "displayName" : "Message Demarcator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message Demarcator",
+          "sensitive" : false
+        },
+        "Kafka Key Attribute Encoding" : {
+          "displayName" : "Kafka Key Attribute Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Kafka Key Attribute Encoding",
+          "sensitive" : false
+        },
+        "Record Reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Reader",
+          "sensitive" : false
+        },
+        "Record Metadata Strategy" : {
+          "displayName" : "Record Metadata Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Record Metadata Strategy",
+          "sensitive" : false
+        },
+        "Transactional ID Prefix" : {
+          "displayName" : "Transactional ID Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transactional ID Prefix",
+          "sensitive" : false
+        },
+        "Header Encoding" : {
+          "displayName" : "Header Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Header Encoding",
+          "sensitive" : false
+        },
+        "max.request.size" : {
+          "displayName" : "Max Request Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.request.size",
+          "sensitive" : false
+        },
+        "Topic Name" : {
+          "displayName" : "Topic Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Topic Name",
+          "sensitive" : false
+        },
+        "Kafka Key" : {
+          "displayName" : "Kafka Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Kafka Key",
+          "sensitive" : false
+        },
+        "partition" : {
+          "displayName" : "Partition",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "partition",
+          "sensitive" : false
+        },
+        "Kafka Connection Service" : {
+          "displayName" : "Kafka Connection Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Kafka Connection Service",
+          "sensitive" : false
+        },
+        "Publish Strategy" : {
+          "displayName" : "Publish Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Publish Strategy",
+          "sensitive" : false
+        },
+        "Record Key Writer" : {
+          "displayName" : "Record Key Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Key Writer",
+          "sensitive" : false
+        },
+        "Failure Strategy" : {
+          "displayName" : "Failure Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Failure Strategy",
+          "sensitive" : false
+        },
+        "partitioner.class" : {
+          "displayName" : "Partitioner Class",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "partitioner.class",
+          "sensitive" : false
+        },
+        "Record Writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Writer",
+          "sensitive" : false
+        },
+        "Transactions Enabled" : {
+          "displayName" : "Transactions Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transactions Enabled",
+          "sensitive" : false
+        },
+        "Message Key Field" : {
+          "displayName" : "Message Key Field",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message Key Field",
+          "sensitive" : false
+        },
+        "FlowFile Attribute Header Pattern" : {
+          "displayName" : "FlowFile Attribute Header Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FlowFile Attribute Header Pattern",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.kafka.processors.PublishKafka",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "41c1c5d3-0e74-3ae3-90fa-7837180328d5",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 240.0,
+        "y" : -176.0
+      },
+      "properties" : {
+        "kafka_key" : "${now():mod(3)}",
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "kafka_key" : {
+          "displayName" : "kafka_key",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "kafka_key",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
