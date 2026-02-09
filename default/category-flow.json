@@ -19,36 +19,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "654536ba-bc80-372a-8860-807878f0913d",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "30ef86d9-7739-3bcd-9443-90ec106bb790",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
-        "name" : "GetChild",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "f8e1d721-6440-344b-9a93-b02b024e6e51",
         "name" : "SplitJson",
         "type" : "PROCESSOR"
@@ -85,7 +55,7 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "6e5e0046-9ea3-305b-ab83-e16581b4eb6c",
+      "identifier" : "da41459f-2e59-3ee1-9bd1-fd23d1566580",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -98,36 +68,6 @@
         "groupId" : "flow-contents-group",
         "id" : "3846dcfa-4349-3efa-85bf-34637c5d0405",
         "name" : "GenerateFlowFile",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "654536ba-bc80-372a-8860-807878f0913d",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b2180801-726f-36ac-94c8-d533bde611a2",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
-        "name" : "GetParent",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -228,9 +168,9 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
-        "name" : "GetChild",
-        "type" : "PROCESSOR"
+        "id" : "654536ba-bc80-372a-8860-807878f0913d",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
@@ -287,36 +227,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
-        "name" : "GetParent",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b1e9441b-efe5-3811-aaf2-dc4e46c10f3d",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "split" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f2bb92f2-6474-3167-bd6e-f42c1e110dea",
-        "name" : "SplitJson",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "f893d968-639a-3032-a84e-b18a96b7b284",
         "name" : "JoltTransformJSON",
         "type" : "PROCESSOR"
@@ -353,8 +263,8 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "654536ba-bc80-372a-8860-807878f0913d",
       "position" : {
-        "x" : 2164.4480423921846,
-        "y" : -117.35537389375475
+        "x" : 1688.0,
+        "y" : 0.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -371,8 +281,8 @@
       "name" : "push_dataDB",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 2432.0,
-        "y" : 48.0
+        "x" : 2152.0,
+        "y" : 304.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -385,8 +295,8 @@
       "name" : "push_url_kafka",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 2888.0,
-        "y" : -24.0
+        "x" : 2912.0,
+        "y" : -200.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -397,7 +307,7 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "failure" ],
+      "autoTerminatedRelationships" : [ "original", "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -416,7 +326,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 848.0,
-        "y" : 168.0
+        "y" : 192.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -553,7 +463,7 @@
       "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -571,10 +481,11 @@
       "name" : "create_url_crawl_extension",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 2448.0,
-        "y" : -360.0
+        "x" : 2112.0,
+        "y" : -240.0
       },
       "properties" : {
+        "groovyx-script-body" : "import org.apache.nifi.processor.io.*\nimport java.nio.charset.StandardCharsets\nimport groovy.json.JsonSlurper\nimport java.text.Normalizer\n\nflowFile = session.get()\nif (!flowFile) return\n\nflowFile = session.write(flowFile, { inputStream, outputStream ->\n\n    def text = inputStream.getText(StandardCharsets.UTF_8.name())\n    def json = new JsonSlurper().parseText(text)\n\n    def catid = json.catid\n    def parentCatid = json.parent_catid\n    def displayName = json.display_name\n\n    // Chuẩn hóa tiếng Việt -> URL slug\n    def slug = Normalizer.normalize(displayName, Normalizer.Form.NFD)\n            .replaceAll(\"\\\\p{InCombiningDiacriticalMarks}+\", \"\")\n            .replaceAll(\"đ\", \"d\")\n            .replaceAll(\"Đ\", \"D\")\n            .replaceAll(\"[^a-zA-Z0-9\\\\s]\", \"\")\n            .trim()\n            .replaceAll(\"\\\\s+\", \"-\")\n\n    def url = \"https://shopee.vn/${slug}-cat.${parentCatid}.${catid}\"\n\n    outputStream.write(url.getBytes(StandardCharsets.UTF_8))\n} as StreamCallback)\n\nsession.transfer(flowFile, REL_SUCCESS)\n",
         "groovyx-failure-strategy" : "rollback"
       },
       "propertyDescriptors" : {
@@ -639,8 +550,8 @@
       "name" : "GenerateFlowFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -448.0,
-        "y" : -144.0
+        "x" : -416.0,
+        "y" : -496.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -711,200 +622,6 @@
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "failure" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-jolt-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "1f78220f-e187-3e5e-afd8-60d17e86d7b5",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "GetParent",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 1560.0,
-        "y" : -360.0
-      },
-      "properties" : {
-        "Jolt Transform" : "jolt-transform-chain",
-        "Max String Length" : "20 MB",
-        "Transform Cache Size" : "1",
-        "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"catid\": \"&\",\n      \"name\": \"&\",\n      \"level\":\"&\"\n    }\n    }\n\n]\n"
-      },
-      "propertyDescriptors" : {
-        "Jolt Transform" : {
-          "displayName" : "Jolt Transform",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Transform",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max String Length",
-          "sensitive" : false
-        },
-        "Transform Cache Size" : {
-          "displayName" : "Transform Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Transform Cache Size",
-          "sensitive" : false
-        },
-        "Custom Transformation Class Name" : {
-          "displayName" : "Custom Transformation Class Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Transformation Class Name",
-          "sensitive" : false
-        },
-        "Custom Module Directory" : {
-          "displayName" : "Custom Module Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Module Directory",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
-          },
-          "sensitive" : false
-        },
-        "Pretty Print" : {
-          "displayName" : "Pretty Print",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Pretty Print",
-          "sensitive" : false
-        },
-        "Jolt Specification" : {
-          "displayName" : "Jolt Specification",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Specification",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
-          },
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "failure" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-jolt-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "66c75d3b-be9e-3ec9-9931-cad2a560a6f3",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "GetChild",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 1552.0,
-        "y" : -8.0
-      },
-      "properties" : {
-        "Jolt Transform" : "jolt-transform-chain",
-        "Max String Length" : "20 MB",
-        "Transform Cache Size" : "1",
-        "Pretty Print" : "false",
-        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"children\": {\n        \"*\": {\n          \"catid\": \"[&1].&\",\n          \"parent_catid\": \"[&1].&\",\n          \"display_name\": \"[&1].&\",\n          \"level\": \"[&1].&\"\n        }\n      }\n    }\n  }\n]\n"
-      },
-      "propertyDescriptors" : {
-        "Jolt Transform" : {
-          "displayName" : "Jolt Transform",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Transform",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max String Length",
-          "sensitive" : false
-        },
-        "Transform Cache Size" : {
-          "displayName" : "Transform Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Transform Cache Size",
-          "sensitive" : false
-        },
-        "Custom Transformation Class Name" : {
-          "displayName" : "Custom Transformation Class Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Transformation Class Name",
-          "sensitive" : false
-        },
-        "Custom Module Directory" : {
-          "displayName" : "Custom Module Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Custom Module Directory",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
-          },
-          "sensitive" : false
-        },
-        "Pretty Print" : {
-          "displayName" : "Pretty Print",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Pretty Print",
-          "sensitive" : false
-        },
-        "Jolt Specification" : {
-          "displayName" : "Jolt Specification",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Jolt Specification",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
-          },
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -923,13 +640,13 @@
       "name" : "GenerateFlowFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -440.0,
-        "y" : 160.0
+        "x" : -408.0,
+        "y" : -136.0
       },
       "properties" : {
         "character-set" : "UTF-8",
         "File Size" : "0B",
-        "generate-ff-custom-text" : "{\n  \"data\": {\n    \"category_list\": [\n      {\n        \"catid\": 11036670,\n        \"parent_catid\": 0,\n        \"name\": \"Home & Living\",\n        \"display_name\": \"Nhà Cửa & Đời Sống\",\n        \"image\": \"24b194a695ea59d384768b7b471d563f\",\n        \"unselected_image\": \"b4768dabefb27ea9c7729d503f954ce8\",\n        \"selected_image\": \"63dd94360f8ff81d83b9fa9ce9496381\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036683,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bedding\",\n            \"display_name\": \"Chăn, Ga, Gối & Nệm\",\n            \"image\": \"f733d34a4a4a26df73d8c8b667ba10f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036695,\n            \"parent_catid\": 11036670,\n            \"name\": \"Furniture\",\n            \"display_name\": \"Đồ nội thất\",\n            \"image\": \"63e036fd4763206d47274a8fe047d2cb\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036717,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Decoration\",\n            \"display_name\": \"Trang trí nhà cửa\",\n            \"image\": \"837bdc29ef68c792e1ce93611c12d18b\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036732,\n            \"parent_catid\": 11036670,\n            \"name\": \"Tools and Home improvement\",\n            \"display_name\": \"Dụng cụ & Thiết bị tiện ích\",\n            \"image\": \"bd689a49f06464140bc502fdc4eab1d8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036748,\n            \"parent_catid\": 11036670,\n            \"name\": \"Kitchenware and food storage\",\n            \"display_name\": \"Đồ dùng nhà bếp và hộp đựng thực phẩm\",\n            \"image\": \"4a3a18dbc4dfd8efb692ab3cb62a564d\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036760,\n            \"parent_catid\": 11036670,\n            \"name\": \"Lighting\",\n            \"display_name\": \"Đèn\",\n            \"image\": \"d9f6d27597fff65b1feb69d77d041f97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036776,\n            \"parent_catid\": 11036670,\n            \"name\": \"Outdoor & Garden\",\n            \"display_name\": \"Ngoài trời & Sân vườn\",\n            \"image\": \"087fa5b9db94d57977725474e12be7e2\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036671,\n            \"parent_catid\": 11036670,\n            \"name\": \"Bathroom\",\n            \"display_name\": \"Đồ dùng phòng tắm\",\n            \"image\": \"9ebf742ff6713326045a2bd9e6ef0dfc\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111670,\n            \"parent_catid\": 11036670,\n            \"name\": \"Regilious and Worship items\",\n            \"display_name\": \"Vật phẩm thờ cúng\",\n            \"image\": \"eef4530088daacf1addde17d69a042fe\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111669,\n            \"parent_catid\": 11036670,\n            \"name\": \"Party supplies\",\n            \"display_name\": \"Đồ trang trí tiệc\",\n            \"image\": \"216f65e2d8a1aaa0a8943913c22913e6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111665,\n            \"parent_catid\": 11036670,\n            \"name\": \"Housekeeping and Laundry\",\n            \"display_name\": \"Chăm sóc nhà cửa và giặt ủi\",\n            \"image\": \"15d2f119c1232183e85b21dca668a7f6\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111668,\n            \"parent_catid\": 11036670,\n            \"name\": \"Houseorganizers\",\n            \"display_name\": \"Sắp xếp nhà cửa\",\n            \"image\": \"d8aca9bed91b3c9d339b4aa0d562dc2f\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111666,\n            \"parent_catid\": 11036670,\n            \"name\": \"Drinkware\",\n            \"display_name\": \"Dụng cụ pha chế\",\n            \"image\": \"539e3d0cc0a4b801d7d377cbf403eb9a\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111664,\n            \"parent_catid\": 11036670,\n            \"name\": \"Home Fragrance & Aromatherapy\",\n            \"display_name\": \"Tinh dầu thơm phòng\",\n            \"image\": \"55c0ca28f933ac7b09cf0964d77aef28\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111667,\n            \"parent_catid\": 11036670,\n            \"name\": \"Dinnerware\",\n            \"display_name\": \"Đồ dùng phòng ăn\",\n            \"image\": \"879b1c91f130b6af972e4d01904e1e97\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      }\n    ],\n    \"just_for_you_data\": {\n      \"enable_just_for_you\": false,\n      \"category\": null\n    }\n  },\n  \"error\": 0,\n  \"error_msg\": \"\"\n}",
+        "generate-ff-custom-text" : "{\n  \"data\": {\n    \"category_list\": [\n      {\n        \"catid\": 11036279,\n        \"parent_catid\": 0,\n        \"name\": \"Beauty & Personal Care\",\n        \"display_name\": \"Sắc Đẹp\",\n        \"image\": \"ef1f336ecc6f97b790d5aae9916dcb72\",\n        \"unselected_image\": \"5ea08600765192186cc1bb31ceb719f0\",\n        \"selected_image\": \"da035603628acbe11df1b6e757d96655\",\n        \"level\": 1,\n        \"children\": [\n          {\n            \"catid\": 11036328,\n            \"parent_catid\": 11036279,\n            \"name\": \"Skincare\",\n            \"display_name\": \"Chăm sóc da mặt\",\n            \"image\": \"aa7a885342e375e15ee241065d3fcaf1\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036280,\n            \"parent_catid\": 11036279,\n            \"name\": \"Bath & Body Care\",\n            \"display_name\": \"Tắm & chăm sóc cơ thể\",\n            \"image\": \"4f6604b9c4d752adc7761aed5a656080\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036314,\n            \"parent_catid\": 11036279,\n            \"name\": \"Makeup\",\n            \"display_name\": \"Trang điểm\",\n            \"image\": \"94243cb53223e425c8241f0d833e87fd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036297,\n            \"parent_catid\": 11036279,\n            \"name\": \"Hair Care\",\n            \"display_name\": \"Chăm sóc tóc\",\n            \"image\": \"8df57bc6ec6ee6dc67f8a482ede8ae57\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036321,\n            \"parent_catid\": 11036279,\n            \"name\": \"Beauty Tools & Accessories\",\n            \"display_name\": \"Dụng cụ & Phụ kiện Làm đẹp\",\n            \"image\": \"36c5cb7b9e25df4b8fde453691d7d357\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111646,\n            \"parent_catid\": 11036279,\n            \"name\": \"Oral Care\",\n            \"display_name\": \"Vệ sinh răng miệng\",\n            \"image\": \"2439afb78130c2788d37d26dd42c91fd\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036310,\n            \"parent_catid\": 11036279,\n            \"name\": \"Perfumes & Fragrances\",\n            \"display_name\": \"Nước hoa\",\n            \"image\": \"1e86393fb01f47ec44036d941a962ad4\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036304,\n            \"parent_catid\": 11036279,\n            \"name\": \"Men's Care\",\n            \"display_name\": \"Chăm sóc nam giới\",\n            \"image\": \"2df595fa1c9121b19b653258f6823ddc\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036344,\n            \"parent_catid\": 11036279,\n            \"name\": \"Others\",\n            \"display_name\": \"Khác\",\n            \"image\": \"c901d864ef65c26758cfe5d2a30bfd66\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11111647,\n            \"parent_catid\": 11036279,\n            \"name\": \"Feminine Care\",\n            \"display_name\": \"Chăm sóc phụ nữ\",\n            \"image\": \"66fef7da4c5b0405b4a641862794554c\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          },\n          {\n            \"catid\": 11036343,\n            \"parent_catid\": 11036279,\n            \"name\": \"Beauty Sets & Packages\",\n            \"display_name\": \"Bộ sản phẩm làm đẹp\",\n            \"image\": \"9c013765005212208ccc424c242c6eb8\",\n            \"unselected_image\": null,\n            \"selected_image\": null,\n            \"level\": 2,\n            \"children\": null,\n            \"block_buyer_platform\": null\n          }\n        ],\n        \"block_buyer_platform\": null\n      }\n    ],\n    \"just_for_you_data\": {\n      \"enable_just_for_you\": false,\n      \"category\": null\n    }\n  },\n  \"error\": 0,\n  \"error_msg\": \"\"\n}",
         "Batch Size" : "1",
         "Unique FlowFiles" : "false",
         "Data Format" : "Text"
