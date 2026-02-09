@@ -475,7 +475,7 @@
         "bucketId" : "default",
         "flowId" : "push-kafka",
         "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "ba6bdf601c7b94fa070ae6ebe877f344763e5d1b"
+        "version" : "a629e6e9ff0a1bdcf07854a29c1b8211f4dbd526"
       }
     }, {
       "comments" : "",
@@ -510,7 +510,7 @@
         "bucketId" : "default",
         "flowId" : "put-data-flow",
         "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "7d04274b5db137f3c287371aef2452ab207638bc"
+        "version" : "5c4b208e00f13a07ba5f43b86c70197464c99a49"
       }
     }, {
       "comments" : "",
@@ -567,8 +567,8 @@
       "name" : "Parse_Item",
       "outputPorts" : [ ],
       "position" : {
-        "x" : 2494.9999606145557,
-        "y" : 515.499982649316
+        "x" : 2488.0,
+        "y" : 456.0
       },
       "processGroups" : [ ],
       "processors" : [ ],
@@ -580,7 +580,7 @@
         "bucketId" : "default",
         "flowId" : "item-flow",
         "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "f3fde2c725ba653eeadcc04a0ce057b554b22139"
+        "version" : "451a9c8e4c44086fa82ab3a7601149e6a5106ff5"
       }
     }, {
       "comments" : "",
@@ -650,7 +650,7 @@
         "bucketId" : "default",
         "flowId" : "category-flow",
         "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "e760c44137593064667ca0135320b4ad95d7114f"
+        "version" : "a4f2b5233742826a68987bf06cd4bcbd59116062"
       }
     } ],
     "processors" : [ {
