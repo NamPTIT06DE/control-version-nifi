@@ -11,7 +11,125 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "035cd9aa-81df-3757-8568-9e2197da2194",
+        "name" : "push_dataDB",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ce8184fb-b5b6-3c14-b645-1e7d769c41d4",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9de2afa-6c51-3334-91a4-d69f4ff6eb5c",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9de2afa-6c51-3334-91a4-d69f4ff6eb5c",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "23a389e9-2832-32a8-ac9b-eea26e442f56",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "69c38b86-f066-39b2-b4ff-c069cc3991b3",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "69c38b86-f066-39b2-b4ff-c069cc3991b3",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c8ef8918-ad4e-3f7c-93fb-9139b346f03a",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bcab9b5e-a3f5-3f71-bb9c-841525bd8e30",
+        "name" : "GenerateFlowFile_item/get_ratings",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "69c38b86-f066-39b2-b4ff-c069cc3991b3",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bc5fd9f2-20b4-33e4-a540-3c75d5d12c7c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "6a2f5dd7-f647-318f-af49-f7f238e9ec99",
+        "name" : "Data",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -22,7 +140,21 @@
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
     "identifier" : "flow-contents-group",
-    "inputPorts" : [ ],
+    "inputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "INPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6a2f5dd7-f647-318f-af49-f7f238e9ec99",
+      "name" : "Data",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -1360.0,
+        "y" : -16.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "INPUT_PORT"
+    } ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
     "name" : "Parse_Review",
@@ -35,22 +167,8 @@
       "name" : "push_dataDB",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -119.99991969079224,
-        "y" : 136.0000416792418
-      },
-      "scheduledState" : "ENABLED",
-      "type" : "OUTPUT_PORT"
-    }, {
-      "allowRemoteAccess" : false,
-      "componentType" : "OUTPUT_PORT",
-      "concurrentlySchedulableTaskCount" : 1,
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3b73ab84-b114-33c6-ac49-9c3d2f2408f2",
-      "name" : "push_url_kafka",
-      "portFunction" : "STANDARD",
-      "position" : {
-        "x" : -119.99991969079224,
-        "y" : -183.9999583207582
+        "x" : 568.0,
+        "y" : -32.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -60,7 +178,253 @@
       "y" : 0.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bcab9b5e-a3f5-3f71-bb9c-841525bd8e30",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GenerateFlowFile_item/get_ratings",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1336.0,
+        "y" : -272.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "{\n  \"data\": {\n    \"ratings\": [\n      {\n        \"orderid\": 0,\n        \"itemid\": 26403864128,\n        \"cmtid\": 17589701258,\n        \"ctime\": 1730200669,\n        \"rating\": 1,\n        \"userid\": 974751454,\n        \"shopid\": 739965304,\n        \"comment\": \"sp đẹp như mô tả, shop giao hàng siêu nhanh\\nchưa dùng nhưng nghe review tốt nên yên tâm mua cho con\\nnếu con dùng hợp sẽ tiếp tục ủng hộ shop\",\n        \"rating_star\": 5,\n        \"status\": 2,\n        \"mtime\": 1757779789,\n        \"editable\": 0,\n        \"opt\": 2,\n        \"filter\": 7,\n        \"is_hidden\": false,\n        \"submit_time\": 1730200669,\n        \"origin_itemid\": 0,\n        \"origin_shopid\": 0,\n        \"author_username\": \"thanhngcbch089\",\n        \"author_portrait\": \"\",\n        \"author_shopid\": 974610119,\n        \"anonymous\": false,\n        \"images\": [\n          \"vn-11134103-7ras8-m1y2umbaf6cee6\"\n        ],\n        \"videos\": [\n          {\n            \"id\": \"vn-11110103-6khw8-m1y2v8trijrv6d\",\n            \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\",\n            \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\",\n            \"duration\": 6699,\n            \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6khw8-m1y2v8trijrv6d\\\",\\\"biz\\\":103,\\\"duration\\\":6699,\\\"create_time\\\":1730200650,\\\"update_time\\\":1730200650,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":457522,\\\"abitrate\\\":96840,\\\"size\\\":472301,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200656,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":348408,\\\"abitrate\\\":65019,\\\"size\\\":354046,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200670,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":108298,\\\"abitrate\\\":103535,\\\"size\\\":186992,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200674,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n            \"cover_image_id\": \"sg-11134206-7repn-m216woo58et33f\",\n            \"highlight\": {\n              \"id\": \"vn-11110103-6khw8-m1y2v8trijrv6d\",\n              \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\",\n              \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\",\n              \"duration\": 6699,\n              \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6khw8-m1y2v8trijrv6d\\\",\\\"biz\\\":103,\\\"duration\\\":6699,\\\"create_time\\\":1730200650,\\\"update_time\\\":1730200650,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":457522,\\\"abitrate\\\":96840,\\\"size\\\":472301,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200656,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":348408,\\\"abitrate\\\":65019,\\\"size\\\":354046,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200670,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":108298,\\\"abitrate\\\":103535,\\\"size\\\":186992,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200674,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n              \"cover_image_id\": \"sg-11134206-7repn-m216woo58et33f\",\n              \"score\": 0.625\n            },\n            \"score\": 0\n          }\n        ],\n        \"product_items\": [\n          {\n            \"itemid\": 26403864128,\n            \"shopid\": 739965304,\n            \"name\": \"Thảm đệm lót chống thấm DONO&DONO Hàn Quốc cho bé, thiết kế 5 lớp riêng biệt, êm ái, an toàn, chống trơn trượt\",\n            \"image\": \"vn-11134207-7r98o-lx0udqmkzrh791\",\n            \"modelid\": 222941821798,\n            \"model_name\": \"\",\n            \"options\": [\n              \"\"\n            ]\n          }\n        ],\n        \"ItemRatingReply\": {\n          \"orderid\": 0,\n          \"cmtid\": 17589701258,\n          \"ctime\": 1730259842,\n          \"userid\": 739984889,\n          \"comment\": \"Dạ DONO&DONO cảm ơn Chị đã tin tưởng và ủng hộ ạ\",\n          \"mtime\": 1730259842,\n          \"is_hidden\": false\n        },\n        \"editable_date\": 1732792669,\n        \"show_reply\": false,\n        \"like_count\": 0,\n        \"liked\": false,\n        \"sync_to_social\": false,\n        \"detailed_rating\": {\n          \"product_quality\": 5,\n          \"seller_service\": 5,\n          \"delivery_service\": 5,\n          \"driver_service\": 5\n        },\n        \"exclude_scoring_due_low_logistic\": false,\n        \"has_template_tag\": false,\n        \"sip_info\": {\n          \"is_oversea\": false,\n          \"origin_region\": \"vn\"\n        },\n        \"is_repeated_purchase\": false,\n        \"overall_fit\": 0,\n        \"is_normal_item\": true,\n        \"size_info_abt\": \"\",\n        \"image_data\": [\n          {\n            \"image_id\": \"vn-11134103-7ras8-m1y2umbaf6cee6\",\n            \"cover_image_id\": \"vn-11134103-7ras8-m1y2umbaf6cee6\",\n            \"score\": 0\n          }\n        ],\n        \"key_media\": {\n          \"key_media_code\": 0,\n          \"key_media_id\": \"\"\n        },\n        \"is_super_review\": false,\n        \"region\": \"VN\",\n        \"original_item_info\": {\n          \"itemid\": 26403864128,\n          \"shopid\": 739965304,\n          \"name\": \"Thảm đệm lót chống thấm DONO&DONO Hàn Quốc cho bé, thiết kế 5 lớp riêng biệt, êm ái, an toàn, chống trơn trượt\",\n          \"image\": \"vn-11134207-7r98o-lx0udqmkzrh791\"\n        },\n        \"show_super_review_tag\": false,\n        \"super_review_status\": 0,\n        \"review_type\": 0,\n        \"medias\": [\n          {\n            \"video\": {\n              \"id\": \"vn-11110103-6khw8-m1y2v8trijrv6d\",\n              \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\",\n              \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\",\n              \"duration\": 6699,\n              \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6khw8-m1y2v8trijrv6d\\\",\\\"biz\\\":103,\\\"duration\\\":6699,\\\"create_time\\\":1730200650,\\\"update_time\\\":1730200650,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":457522,\\\"abitrate\\\":96840,\\\"size\\\":472301,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200656,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":348408,\\\"abitrate\\\":65019,\\\"size\\\":354046,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200670,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":108298,\\\"abitrate\\\":103535,\\\"size\\\":186992,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200674,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n              \"cover_image_id\": \"sg-11134206-7repn-m216woo58et33f\",\n              \"highlight\": {\n                \"id\": \"vn-11110103-6khw8-m1y2v8trijrv6d\",\n                \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\",\n                \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\",\n                \"duration\": 6699,\n                \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6khw8-m1y2v8trijrv6d\\\",\\\"biz\\\":103,\\\"duration\\\":6699,\\\"create_time\\\":1730200650,\\\"update_time\\\":1730200650,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-7ras8-m1y2v8trjycbdc\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16000051730200651.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":457522,\\\"abitrate\\\":96840,\\\"size\\\":472301,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200656,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":348408,\\\"abitrate\\\":65019,\\\"size\\\":354046,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200670,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6khw8-m1y2v8trijrv6d.16003081730200668.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":108298,\\\"abitrate\\\":103535,\\\"size\\\":186992,\\\"fps\\\":25,\\\"duration\\\":6719,\\\"update_time\\\":1730200674,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n                \"cover_image_id\": \"sg-11134206-7repn-m216woo58et33f\",\n                \"score\": 0.625\n              },\n              \"score\": 0\n            }\n          },\n          {\n            \"image\": {\n              \"image_id\": \"vn-11134103-7ras8-m1y2umbaf6cee6\",\n              \"cover_image_id\": \"vn-11134103-7ras8-m1y2umbaf6cee6\",\n              \"score\": 0\n            }\n          }\n        ],\n        \"review_creation_source\": 0\n      },\n      {\n        \"orderid\": 0,\n        \"itemid\": 26403864128,\n        \"cmtid\": 81429842785,\n        \"ctime\": 1765534938,\n        \"rating\": 1,\n        \"userid\": 74182457,\n        \"shopid\": 739965304,\n        \"comment\": \"Độ êm:kha em\\nChống thấm:chua test\\nChất liệu:chat mem\\n\\nKích thước to hoen m nghĩ, chất liệu ổn. Đóng gói cẩn thận\",\n        \"rating_star\": 5,\n        \"status\": 2,\n        \"mtime\": 1766128947,\n        \"editable\": 0,\n        \"opt\": 2,\n        \"filter\": 7,\n        \"is_hidden\": false,\n        \"submit_time\": 1765534938,\n        \"origin_itemid\": 0,\n        \"origin_shopid\": 0,\n        \"author_username\": \"k*****m\",\n        \"author_shopid\": 74180987,\n        \"anonymous\": true,\n        \"images\": [\n          \"vn-11134103-820l4-mi5sagls3f9i8d\"\n        ],\n        \"videos\": [\n          {\n            \"id\": \"vn-11110103-6v8gq-mi5s3rge7qivc5\",\n            \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\",\n            \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\",\n            \"duration\": 5040,\n            \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6v8gq-mi5s3rge7qivc5\\\",\\\"biz\\\":103,\\\"duration\\\":5040,\\\"create_time\\\":1765534864,\\\"update_time\\\":1765534865,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":745844,\\\"abitrate\\\":97542,\\\"size\\\":540666,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534869,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":503020,\\\"abitrate\\\":33268,\\\"size\\\":346004,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534872,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":201877,\\\"abitrate\\\":101165,\\\"size\\\":199983,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534874,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n            \"cover_image_id\": \"sg-11134206-822x1-mi986m1nb9jbb8\",\n            \"highlight\": {\n              \"id\": \"vn-11110103-6v8gq-mi5s3rge7qivc5\",\n              \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\",\n              \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\",\n              \"duration\": 5040,\n              \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6v8gq-mi5s3rge7qivc5\\\",\\\"biz\\\":103,\\\"duration\\\":5040,\\\"create_time\\\":1765534864,\\\"update_time\\\":1765534865,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":745844,\\\"abitrate\\\":97542,\\\"size\\\":540666,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534869,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":503020,\\\"abitrate\\\":33268,\\\"size\\\":346004,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534872,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":201877,\\\"abitrate\\\":101165,\\\"size\\\":199983,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534874,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n              \"cover_image_id\": \"sg-11134206-822x1-mi986m1nb9jbb8\",\n              \"score\": 0\n            },\n            \"score\": 0\n          }\n        ],\n        \"product_items\": [\n          {\n            \"itemid\": 26403864128,\n            \"shopid\": 739965304,\n            \"name\": \"Thảm đệm lót chống thấm DONO&DONO Hàn Quốc cho bé, thiết kế 5 lớp riêng biệt, êm ái, an toàn, chống trơn trượt\",\n            \"image\": \"vn-11134207-7r98o-lx0udqmkzrh791\",\n            \"is_snapshot\": 1,\n            \"snapshotid\": 233523148175,\n            \"modelid\": 222941821798,\n            \"model_name\": \"\",\n            \"options\": [\n              \"\"\n            ]\n          }\n        ],\n        \"ItemRatingReply\": {\n          \"orderid\": 0,\n          \"cmtid\": 81429842785,\n          \"ctime\": 1766128947,\n          \"userid\": 739984889,\n          \"comment\": \"Dạ DONO&DONO cảm ơn chị đã tin tưởng và ủng hộ shop ạ\",\n          \"mtime\": 1766128947,\n          \"is_hidden\": false\n        },\n        \"editable_date\": 1768126938,\n        \"show_reply\": false,\n        \"liked\": false,\n        \"sync_to_social\": false,\n        \"detailed_rating\": {\n          \"product_quality\": 5,\n          \"seller_service\": 5,\n          \"delivery_service\": 5,\n          \"driver_service\": 5\n        },\n        \"exclude_scoring_due_low_logistic\": false,\n        \"template_tags\": [\n          \"Độ êm\",\n          \"Chống thấm\",\n          \"Chất liệu\"\n        ],\n        \"has_template_tag\": true,\n        \"sip_info\": {\n          \"is_oversea\": false,\n          \"origin_region\": \"vn\"\n        },\n        \"is_repeated_purchase\": false,\n        \"overall_fit\": 0,\n        \"is_normal_item\": true,\n        \"size_info_abt\": \"\",\n        \"image_data\": [\n          {\n            \"image_id\": \"vn-11134103-820l4-mi5sagls3f9i8d\",\n            \"cover_image_id\": \"vn-11134103-820l4-mi5sagls3f9i8d\",\n            \"score\": 0\n          }\n        ],\n        \"key_media\": {\n          \"key_media_code\": 0,\n          \"key_media_id\": \"\"\n        },\n        \"is_super_review\": false,\n        \"region\": \"VN\",\n        \"original_item_info\": {\n          \"itemid\": 26403864128,\n          \"shopid\": 739965304,\n          \"name\": \"Thảm đệm lót chống thấm DONO&DONO Hàn Quốc cho bé, thiết kế 5 lớp riêng biệt, êm ái, an toàn, chống trơn trượt\",\n          \"image\": \"vn-11134207-7r98o-lx0udqmkzrh791\"\n        },\n        \"show_super_review_tag\": false,\n        \"super_review_status\": 0,\n        \"review_type\": 0,\n        \"medias\": [\n          {\n            \"video\": {\n              \"id\": \"vn-11110103-6v8gq-mi5s3rge7qivc5\",\n              \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\",\n              \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\",\n              \"duration\": 5040,\n              \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6v8gq-mi5s3rge7qivc5\\\",\\\"biz\\\":103,\\\"duration\\\":5040,\\\"create_time\\\":1765534864,\\\"update_time\\\":1765534865,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":745844,\\\"abitrate\\\":97542,\\\"size\\\":540666,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534869,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":503020,\\\"abitrate\\\":33268,\\\"size\\\":346004,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534872,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":201877,\\\"abitrate\\\":101165,\\\"size\\\":199983,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534874,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n              \"cover_image_id\": \"sg-11134206-822x1-mi986m1nb9jbb8\",\n              \"highlight\": {\n                \"id\": \"vn-11110103-6v8gq-mi5s3rge7qivc5\",\n                \"cover\": \"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\",\n                \"url\": \"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\",\n                \"duration\": 5040,\n                \"mms_ext\": \"{\\\"vid\\\":\\\"vn-11110103-6v8gq-mi5s3rge7qivc5\\\",\\\"biz\\\":103,\\\"duration\\\":5040,\\\"create_time\\\":1765534864,\\\"update_time\\\":1765534865,\\\"serviceID\\\":6,\\\"cover\\\":\\\"https://down-bs-vn.img.susercontent.com/vn-11110103-6v8gq-mi5s3rge7qivc5_cover\\\",\\\"cover_list\\\":[],\\\"formats\\\":[{\\\"format\\\":1600005,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16000051765534865.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":745844,\\\"abitrate\\\":97542,\\\"size\\\":540666,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534869,\\\"codec\\\":\\\"H264\\\"}],\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":503020,\\\"abitrate\\\":33268,\\\"size\\\":346004,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534872,\\\"codec\\\":\\\"H264\\\"},\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600308,\\\"defn\\\":\\\"V640P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"url\\\":\\\"https://down-zl-vn.vod.susercontent.com/api/v4/11110103/mms/vn-11110103-6v8gq-mi5s3rge7qivc5.16003081765534870.mp4\\\",\\\"width\\\":640,\\\"height\\\":1138,\\\"bitrate\\\":201877,\\\"abitrate\\\":101165,\\\"size\\\":199983,\\\"fps\\\":25,\\\"duration\\\":5079,\\\"update_time\\\":1765534874,\\\"codec\\\":\\\"H265\\\"}]},\\\"ab_test\\\":\\\"\\\"}\",\n                \"cover_image_id\": \"sg-11134206-822x1-mi986m1nb9jbb8\",\n                \"score\": 0\n              },\n              \"score\": 0\n            }\n          },\n          {\n            \"image\": {\n              \"image_id\": \"vn-11134103-820l4-mi5sagls3f9i8d\",\n              \"cover_image_id\": \"vn-11134103-820l4-mi5sagls3f9i8d\",\n              \"score\": 0\n            }\n          }\n        ],\n        \"review_creation_source\": 0\n      }\n    ],\n    \"item_rating_summary\": {\n      \"rating_total\": 15,\n      \"rating_count\": [\n        0,\n        0,\n        0,\n        0,\n        15\n      ],\n      \"rcount_with_context\": 5,\n      \"rcount_with_image\": 4,\n      \"rcount_with_media\": 4,\n      \"rcount_local_review\": 15,\n      \"rcount_repeat_purchase\": 0,\n      \"rcount_overall_fit_small\": 0,\n      \"rcount_overall_fit_fit\": 0,\n      \"rcount_overall_fit_large\": 0,\n      \"rcount_oversea_review\": 0,\n      \"rcount_folded\": 0,\n      \"show_size_fitting\": false\n    },\n    \"is_sip_item\": true,\n    \"rcmd_algo\": \"BUNDLE:comment_search,BUNDLE_RANKER:media_ranker_default,RECALLER:comment_search_new_text_hidden,QUEUE:comment_search_new_text_hidden,NEWABTEST:623628,QUEUES:comment_search_new_text_hidden\",\n    \"downgrade_switch\": false,\n    \"has_more\": true,\n    \"show_local_review\": false,\n    \"browsing_ui\": \"\",\n    \"enable_buyer_gallery_media\": true,\n    \"size_info_abt\": \"\",\n    \"resize_image_abt\": true,\n    \"purchase_bar_abt\": \"bucket_a\",\n    \"signature\": \"\",\n    \"original_review_summary\": {},\n    \"fe_review_summary\": {},\n    \"similar_section_scenario\": 3,\n    \"variation_filters_data\": {},\n    \"hide_shop_rating\": false,\n    \"current_review_tab\": 0,\n    \"item_rating_count\": 15,\n    \"item_rating_star\": 5,\n    \"fe_component_toggles\": {},\n    \"search_bar_enough_organic_review\": true,\n    \"size_filter_count\": 0,\n    \"chatbot_track_id\": \"\",\n    \"chatbot_pass_through_data\": \"\",\n    \"is_show_product_ratings_section\": true,\n    \"is_show_similar_ratings_section\": false\n  },\n  \"error\": 0\n}",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "69c38b86-f066-39b2-b4ff-c069cc3991b3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "JoltTransformJSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -744.0,
+        "y" : -64.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        \"ratings\": {\n          \"*\": {\n            // Định danh và thời gian\n            \"itemid\": \"reviews[&1].itemid\",\n            \"shopid\": \"reviews[&1].shopid\",\n            \"userid\": \"reviews[&1].userid\",\n            \"cmtid\": \"reviews[&1].cmtid\",\n            \"ctime\": \"reviews[&1].create_time_unix\",\n            \"submit_time\": \"reviews[&1].submit_time_unix\",\n            // Nội dung và xếp hạng\n            \"comment\": \"reviews[&1].comment\",\n            \"rating_star\": \"reviews[&1].rating_star\",\n            // Thông tin chi tiết điểm số (Detailed Rating)\n            \"detailed_rating\": {\n              \"product_quality\": \"reviews[&2].score_product\",\n              \"seller_service\": \"reviews[&2].score_seller\",\n              \"delivery_service\": \"reviews[&2].score_delivery\",\n              \"driver_service\": \"reviews[&2].score_driver\"\n            },\n            // Người dùng và sản phẩm đã mua\n            \"author_username\": \"reviews[&1].author_username\",\n            \"anonymous\": \"reviews[&1].is_anonymous\",\n            \"is_repeated_purchase\": \"reviews[&1].is_repeated_purchase\",\n            // Phản hồi từ shop\n            \"ItemRatingReply\": {\n              \"comment\": \"reviews[&1].shop_reply\",\n              \"ctime\": \"reviews[&1].shop_reply_time\"\n            },\n            // Các tag gợi ý (Độ êm, Chống thấm...)\n            \"template_tags\": \"reviews[&1].tags\"\n          }\n        }\n      }\n    }\n  },\n  {\n    // Bước này để làm phẳng mảng reviews ra root để dễ xử lý tiếp\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"reviews\": \"\"\n    }\n  }\n]\n"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "TEXT", "FILE" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c9de2afa-6c51-3334-91a4-d69f4ff6eb5c",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "SplitJson",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -64.0,
+        "y" : -64.0
+      },
+      "properties" : {
+        "Max String Length" : "20 MB",
+        "Null Value Representation" : "empty string",
+        "JsonPath Expression" : "$.[*]"
+      },
+      "propertyDescriptors" : {
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "JsonPath Expression" : {
+          "displayName" : "JsonPath Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JsonPath Expression",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.SplitJson",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
