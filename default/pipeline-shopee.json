@@ -14,6 +14,35 @@
     "connections" : [ {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "47d9b8ce-ee5f-3aff-86e2-eaa3748937d0",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7e2dda23-0179-31e4-9649-c3e0d432494f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "b3d65004-1c13-3f54-baff-e83e5ad79a0b",
+        "id" : "46f3a8ca-56df-3507-aa4f-c5e9ec3ef2a2",
+        "name" : "push_url_kafka",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
       "bends" : [ {
         "x" : 3592.0,
         "y" : 1528.0
@@ -39,35 +68,6 @@
       "source" : {
         "groupId" : "7beabe0b-ce5a-369a-bbfc-0ef68c753dc3",
         "id" : "3b73ab84-b114-33c6-ac49-9c3d2f2408f2",
-        "name" : "push_url_kafka",
-        "type" : "OUTPUT_PORT"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "47d9b8ce-ee5f-3aff-86e2-eaa3748937d0",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "7e2dda23-0179-31e4-9649-c3e0d432494f",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "" ],
-      "source" : {
-        "groupId" : "b3d65004-1c13-3f54-baff-e83e5ad79a0b",
-        "id" : "46f3a8ca-56df-3507-aa4f-c5e9ec3ef2a2",
         "name" : "push_url_kafka",
         "type" : "OUTPUT_PORT"
       },
@@ -253,38 +253,6 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : 3584.0,
-        "y" : 208.0
-      } ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "5b127cc0-9ae0-3968-a190-7ec3f1ce3730",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "0b588623-a9c9-3397-9673-316b8b50ec0b",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "" ],
-      "source" : {
-        "groupId" : "ba63e771-35fd-335e-a208-ace3005768e3",
-        "id" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
-        "name" : "push_dataDB",
-        "type" : "OUTPUT_PORT"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ {
         "x" : 3232.0,
         "y" : 368.0
       } ],
@@ -317,8 +285,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : 3312.0,
-        "y" : 1408.0
+        "x" : 3584.0,
+        "y" : 208.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -330,7 +298,7 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "68b450d2-3189-337d-9821-817c060d2a9c",
+      "identifier" : "0b588623-a9c9-3397-9673-316b8b50ec0b",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -339,9 +307,41 @@
       "prioritizers" : [ ],
       "selectedRelationships" : [ "" ],
       "source" : {
-        "groupId" : "7beabe0b-ce5a-369a-bbfc-0ef68c753dc3",
-        "id" : "035cd9aa-81df-3757-8568-9e2197da2194",
+        "groupId" : "ba63e771-35fd-335e-a208-ace3005768e3",
+        "id" : "34597fda-e44d-3cc1-95bb-98c78b6a9674",
         "name" : "push_dataDB",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 3200.0,
+        "y" : 1120.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "47d9b8ce-ee5f-3aff-86e2-eaa3748937d0",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ece792b2-7ad5-3c63-8f16-e8fdda73072c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "d07bdddb-5676-38a2-9fbc-89ab70aa8443",
+        "id" : "3c0cc8a3-ec9c-31ff-8764-a9a00d8c5589",
+        "name" : "push_url_kafka",
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
@@ -378,20 +378,20 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : 3200.0,
-        "y" : 1120.0
+        "x" : 3312.0,
+        "y" : 1408.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "47d9b8ce-ee5f-3aff-86e2-eaa3748937d0",
+        "id" : "5b127cc0-9ae0-3968-a190-7ec3f1ce3730",
         "name" : "Funnel",
         "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "ece792b2-7ad5-3c63-8f16-e8fdda73072c",
+      "identifier" : "68b450d2-3189-337d-9821-817c060d2a9c",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -400,9 +400,9 @@
       "prioritizers" : [ ],
       "selectedRelationships" : [ "" ],
       "source" : {
-        "groupId" : "d07bdddb-5676-38a2-9fbc-89ab70aa8443",
-        "id" : "3c0cc8a3-ec9c-31ff-8764-a9a00d8c5589",
-        "name" : "push_url_kafka",
+        "groupId" : "7beabe0b-ce5a-369a-bbfc-0ef68c753dc3",
+        "id" : "035cd9aa-81df-3757-8568-9e2197da2194",
+        "name" : "push_dataDB",
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
@@ -579,8 +579,8 @@
         "branch" : "main",
         "bucketId" : "default",
         "flowId" : "item-flow",
-        "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "451a9c8e4c44086fa82ab3a7601149e6a5106ff5"
+        "storageLocation" : "git@github.com:NamPTIT06DE/control-version-nifi.git",
+        "version" : "3ee8772883966153e9d063e0fc8378ab39aee374"
       }
     }, {
       "comments" : "",
