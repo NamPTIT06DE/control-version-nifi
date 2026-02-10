@@ -11,7 +11,95 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7726b94e-ce33-3504-8323-f797220845c5",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "94f2357c-10db-36f0-8f7a-91c0fa87dcef",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "acc6b909-5b02-309f-8f6e-53b8ca4fbe55",
+        "name" : "Data",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7726b94e-ce33-3504-8323-f797220845c5",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "39f47b71-5446-3d46-98c6-21973afd91be",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4d5cca28-c258-31f2-b971-6789d08550b2",
+        "name" : "GenerateFlowFile-shop/get_shop_base_v2",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "ecbff3ce-5087-39eb-ad42-85d3bf419ec3",
+        "name" : "push_dataDB",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "05d7252a-2d17-3d03-bea0-7b1e8c8bc620",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7726b94e-ce33-3504-8323-f797220845c5",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -22,7 +110,21 @@
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
     "identifier" : "flow-contents-group",
-    "inputPorts" : [ ],
+    "inputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "INPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "acc6b909-5b02-309f-8f6e-53b8ca4fbe55",
+      "name" : "Data",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -1160.0,
+        "y" : -128.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "INPUT_PORT"
+    } ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
     "name" : "Parse_Shop",
@@ -35,22 +137,8 @@
       "name" : "push_dataDB",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -120.07895930413792,
-        "y" : 137.0000039374799
-      },
-      "scheduledState" : "ENABLED",
-      "type" : "OUTPUT_PORT"
-    }, {
-      "allowRemoteAccess" : false,
-      "componentType" : "OUTPUT_PORT",
-      "concurrentlySchedulableTaskCount" : 1,
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3c0cc8a3-ec9c-31ff-8764-a9a00d8c5589",
-      "name" : "push_url_kafka",
-      "portFunction" : "STANDARD",
-      "position" : {
-        "x" : -120.07895930413792,
-        "y" : -182.9999960625201
+        "x" : 384.0,
+        "y" : -136.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -60,7 +148,194 @@
       "y" : 0.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4d5cca28-c258-31f2-b971-6789d08550b2",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GenerateFlowFile-shop/get_shop_base_v2",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1024.0,
+        "y" : -432.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "generate-ff-custom-text" : "{\n    \"error\": 0,\n    \"error_msg\": \"\",\n    \"data\": {\n        \"shopid\": 739965304,\n        \"userid\": 739984889,\n        \"name\": \"DONO\\u0026DONO OFFICIAL STORE\",\n        \"cover\": \"b7d0864bdde590ba9081a750b77a409c\",\n        \"follower_count\": 22061,\n        \"is_official_shop\": true,\n        \"is_preferred_plus_seller\": false,\n        \"is_shopee_verified\": false,\n        \"chat_disabled\": false,\n        \"rating_star\": 4.937049,\n        \"account\": {\n            \"username\": \"donodono_official\",\n            \"following_count\": 6,\n            \"portrait\": \"vn-11134216-7ras8-m4a7e36kgphj54\",\n            \"is_seller\": true,\n            \"phone_verified\": true,\n            \"email_verified\": true,\n            \"fbid\": \"\",\n            \"total_avg_star\": 5,\n            \"feed_account_info\": {\n                \"can_post_feed\": true\n            },\n            \"status\": 1\n        },\n        \"last_active_time\": 1770704444,\n        \"vacation\": false,\n        \"is_blocking_owner\": false,\n        \"followed\": false,\n        \"ab_test_info\": {\n            \"header_tabs_layout\": \"control\",\n            \"deep_discount_item_card\": \"default\",\n            \"item_card\": \"control\",\n            \"feeds_live_landing\": \"treatment\",\n            \"image_category\": \"new_image_cat\",\n            \"remove_item_count_on_category_tab\": \"default\",\n            \"default_component_improvement\": \"top_products\",\n            \"deep_discount_enhancement\": \"default\",\n            \"new_default_scp\": \"treatment_2\",\n            \"default_landing\": \"control\",\n            \"two_tier_category\": \"default\",\n            \"two_tier_category_for_layoutc\": \"default\",\n            \"live_stream_auto_play\": \"treatment\",\n            \"dd_item_card_2\": \"control\",\n            \"tier_shop_category\": \"treatment_new_layout\",\n            \"product_one_per_row\": \"control\",\n            \"fashion_shop_improvement\": \"current\",\n            \"shop_rfy_entrypoint\": \"treatment\",\n            \"voucher_popup_non_buyers\": \"control\",\n            \"category_ui_improvement_1\": \"new_category_ui\",\n            \"autoplay_highlight_video\": \"default\",\n            \"ads_shop_improvement\": \"control\",\n            \"non_deco_shop_homepage_personalization\": \"treatment_1\",\n            \"brand_day_overlap\": \"control\",\n            \"truncate_shop_item_card\": \"control\",\n            \"popup_new_design\": \"treatment_1\",\n            \"shop_entry_landing_redirection\": \"control_1\",\n            \"shop_live_stream_floating\": \"treatment_1\",\n            \"shop_voucher_ui_revamp\": \"control_1\",\n            \"remove_rfy_experiment_1\": \"treatment\",\n            \"remove_rfy_experiment_2\": \"treatment_5\",\n            \"remove_rfy_experiment_3\": \"control\",\n            \"brand_shop_revamp\": \"control\",\n            \"promotion_card_in_product_tab\": \"control\",\n            \"in_shop_notice\": \"treatment_2\",\n            \"new_arrival_zone\": \"control_1\",\n            \"scp_add_item_cards\": \"control\",\n            \"scp_add_atc_button\": \"control\",\n            \"lower_the_height_of_shop_header\": \"treatment\",\n            \"category_decoration_standard_layout_tier_1\": \"control\",\n            \"category_decoration_standard_layout_tier_2\": \"control\",\n            \"category_decoration_image_layout\": \"treatment_1\",\n            \"category_decoration_item_layout\": \"treatment_2\",\n            \"change_shop_header_background_image\": \"control\",\n            \"landing_tab_from_live_room\": \"treatment_2\",\n            \"remove_new_tag_in_product_tab\": \"control_1\",\n            \"in_shop_noti_item_collection_scenarios\": \"treatment_2\",\n            \"shop_voucher_component_optimisation\": \"control_1\",\n            \"floating_cart_in_shop\": \"Control_1\",\n            \"shop_add_sharing_button\": \"control\",\n            \"remove_refresh_screen\": \"control_1\",\n            \"auto_play_live_module\": \"treatment_3\",\n            \"item_card_ui_in_shop_product_tab\": \"control_1\",\n            \"revamp_live_event_card_ui\": \"treatment_1\",\n            \"review_tab_display_position\": \"control_1\"\n        },\n        \"description\": \"Dono\\u0026Dono là thương hiệu số 1 về các sản phẩm cao cấp dành cho mẹ và bé tại Hàn Quốc. Với mong muốn mang những sản phẩm tốt nhất đến với trẻ em trên toàn thế giới, Dono\\u0026Dono đã chính thức có mặt tại Việt Nam vào tháng 05/2022, phân phối bởi Công ty CP Mẹ ru con.\",\n        \"item_count\": 35,\n        \"show_high_end_brand_style\": false,\n        \"video_entry\": {},\n        \"floating_cart\": {\n            \"is_show_floating_cart\": false,\n            \"floating_cart_switch_tab_refresh_interval\": 5\n        },\n        \"brand_day\": {\n            \"background_color\": \"\",\n            \"highlight_color\": \"\",\n            \"brand_day_end_time\": 0\n        },\n        \"tab_meta\": {\n            \"shop_tab\": {\n                \"shop_is_non_deco\": false,\n                \"shop_without_op_behavior\": false,\n                \"decoration_type\": \"general_deco\",\n                \"is_high_end_brand_shop\": false\n            },\n            \"campaign_tab\": {\n                \"show_campaign_tab\": false\n            },\n            \"membership_tab\": {\n                \"show_membership_tab\": false,\n                \"has_join_membership\": false\n            },\n            \"live_tab\": {\n                \"show_live_tab\": false\n            },\n            \"content_tab\": {\n                \"show_content_tab\": false\n            },\n            \"review_tab\": {\n                \"show_review_tab\": false\n            }\n        },\n        \"toggles\": {\n            \"disable_chat_performance\": false,\n            \"deco_theme_color_compo_layout\": true,\n            \"show_deco_entry\": false\n        },\n        \"is_shopee_choice_shop\": false,\n        \"is_censored\": false,\n        \"ctime\": 1649169075,\n        \"shop_rating\": {\n            \"rating_normal\": 24,\n            \"rating_bad\": 8,\n            \"rating_good\": 2099\n        },\n        \"response_rate\": 99,\n        \"response_time\": 2248,\n        \"seller_metrics\": {\n            \"cancellation_visibility\": 0,\n            \"cancellation_warning\": 10,\n            \"cancellation_rate\": 0\n        }\n    }\n}",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7726b94e-ce33-3504-8323-f797220845c5",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "JoltTransformJSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -376.0,
+        "y" : -168.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"data\": {\n        // Thông tin định danh cơ bản\n        \"shopid\": \"shop_id\",\n        \"userid\": \"user_id\",\n        \"name\": \"shop_name\",\n        \"description\": \"description\",\n        \"ctime\": \"create_time_unix\",\n        // Trạng thái shop\n        \"is_official_shop\": \"is_mall\",\n        \"is_preferred_plus_seller\": \"is_preferred_plus\",\n        \"is_shopee_verified\": \"is_verified\",\n        \"vacation\": \"is_on_vacation\",\n        // Chỉ số tương tác và quy mô\n        \"follower_count\": \"follower_count\",\n        \"item_count\": \"total_products\",\n        \"rating_star\": \"avg_rating_star\",\n        \"response_rate\": \"chat_response_rate\",\n        \"response_time\": \"chat_response_time_seconds\",\n        // Chi tiết đánh giá (Rating) - Đưa thẳng ra ngoài\n        \"shop_rating\": {\n          \"rating_good\": \"count_rating_good\",\n          \"rating_normal\": \"count_rating_normal\",\n          \"rating_bad\": \"count_rating_bad\"\n        },\n        // Thông tin tài khoản\n        \"account\": {\n          \"username\": \"username\",\n          \"portrait\": \"avatar_id\"\n        },\n        // Chỉ số vận hành\n        \"seller_metrics\": {\n          \"cancellation_rate\": \"cancellation_rate\"\n        }\n      }\n    }\n  }\n]\n"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "TEXT", "FILE" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
