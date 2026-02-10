@@ -17,6 +17,35 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b27330e1-750e-32a4-892d-3a5427effa20",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "59a483fa-df80-3167-810e-821df3f1751f",
+        "name" : "Data",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "groupId" : "flow-contents-group",
         "id" : "3b999fbb-9b92-306a-9136-7bc03c294aab",
         "name" : "push_dataDB",
@@ -106,6 +135,66 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2e125a77-3efc-35ba-a23f-e8410eba972f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f0843868-f20b-3658-8fd1-f53e4b1fa141",
+        "name" : "BuildUrlItemDetail",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "31dd1411-a284-3219-87a7-27e284a8dbcb",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "groupId" : "flow-contents-group",
         "id" : "46f3a8ca-56df-3507-aa4f-c5e9ec3ef2a2",
         "name" : "push_url_kafka",
@@ -113,19 +202,19 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "feaedf60-a906-326a-94e0-4fda6480b06c",
+      "identifier" : "e1d51e8b-968f-3767-8164-2b57aa36d0ae",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
+      "selectedRelationships" : [ "success" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "e3e83f10-03c4-3b85-987c-401d9743e364",
-        "name" : "JoltTransformJSON",
+        "id" : "f0843868-f20b-3658-8fd1-f53e4b1fa141",
+        "name" : "BuildUrlItemDetail",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -140,6 +229,96 @@
         "id" : "2a048029-67e9-3f6f-87fa-e95e29742493",
         "name" : "SplitJson",
         "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d81a5b19-5079-3b31-b976-7e9a1b88ecc6",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c76bc37e-4494-37ee-8d69-40a3b28cb83f",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f2afb573-c561-3d7e-a566-3263aa968f8e",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "e3e83f10-03c4-3b85-987c-401d9743e364",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8f65426c-6778-3534-be92-6f67cf9ff882",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
@@ -167,9 +346,9 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "2a048029-67e9-3f6f-87fa-e95e29742493",
-        "name" : "SplitJson",
-        "type" : "PROCESSOR"
+        "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
@@ -185,36 +364,6 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "c76bc37e-4494-37ee-8d69-40a3b28cb83f",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "2a048029-67e9-3f6f-87fa-e95e29742493",
-        "name" : "SplitJson",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2abd4b56-2769-307a-9a1c-51b193685177",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
         "name" : "JoltTransformJSON",
         "type" : "PROCESSOR"
       },
@@ -249,6 +398,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2abd4b56-2769-307a-9a1c-51b193685177",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -258,9 +437,31 @@
     "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-    "funnels" : [ ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
+      "position" : {
+        "x" : 312.0,
+        "y" : 344.0
+      }
+    } ],
     "identifier" : "flow-contents-group",
-    "inputPorts" : [ ],
+    "inputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "INPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "59a483fa-df80-3167-810e-821df3f1751f",
+      "name" : "Data",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -2288.0,
+        "y" : 352.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "INPUT_PORT"
+    } ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
     "name" : "Parse_Item",
@@ -273,8 +474,8 @@
       "name" : "push_dataDB",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 1192.0,
-        "y" : 296.0
+        "x" : 1512.0,
+        "y" : 488.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -287,8 +488,8 @@
       "name" : "push_url_kafka",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 272.0,
-        "y" : -184.0
+        "x" : 1512.0,
+        "y" : 136.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -299,7 +500,7 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -317,8 +518,8 @@
       "name" : "JoltTransformJSON",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -608.0,
-        "y" : -64.0
+        "x" : -616.0,
+        "y" : -48.0
       },
       "properties" : {
         "Jolt Transform" : "jolt-transform-chain",
@@ -381,7 +582,7 @@
           "name" : "Jolt Specification",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         }
@@ -400,7 +601,7 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-groovyx-nar",
+        "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "2.0.0"
       },
@@ -409,59 +610,34 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "05877374-2e9c-3028-99c6-34d0c9717df7",
+      "identifier" : "f71c33da-1d75-378d-8251-a9665a615aa9",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "ExecuteGroovyScript",
+      "name" : "RouteOnAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 752.0,
-        "y" : -104.0
+        "x" : -1496.0,
+        "y" : 312.0
       },
       "properties" : {
-        "groovyx-failure-strategy" : "rollback"
+        "Routing Strategy" : "Route to Property name"
       },
       "propertyDescriptors" : {
-        "groovyx-script-body" : {
-          "displayName" : "Script Body",
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "groovyx-script-body",
-          "sensitive" : false
-        },
-        "groovyx-failure-strategy" : {
-          "displayName" : "Failure strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "groovyx-failure-strategy",
-          "sensitive" : false
-        },
-        "groovyx-additional-classpath" : {
-          "displayName" : "Additional classpath",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "groovyx-additional-classpath",
-          "sensitive" : false
-        },
-        "groovyx-script-file" : {
-          "displayName" : "Script File",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "groovyx-script-file",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE" ]
-          },
+          "name" : "Routing Strategy",
           "sensitive" : false
         }
       },
       "retriedRelationships" : [ ],
       "retryCount" : 10,
-      "runDurationMillis" : 0,
+      "runDurationMillis" : 25,
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.groovyx.ExecuteGroovyScript",
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -482,8 +658,8 @@
       "name" : "ExecuteScript",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1633.152175775759,
-        "y" : 90.7000031578857
+        "x" : 2048.0,
+        "y" : 200.0
       },
       "properties" : {
         "Script Engine" : "Clojure"
@@ -554,8 +730,8 @@
       "name" : "shop/get_shop_tab",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1288.0,
-        "y" : 656.0
+        "x" : -1048.0,
+        "y" : 1008.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -644,8 +820,8 @@
       "name" : "GenerateFlowFile_search/search_items",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1304.0,
-        "y" : -64.0
+        "x" : -1232.0,
+        "y" : -336.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -714,6 +890,49 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "python-extensions",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f0843868-f20b-3658-8fd1-f53e4b1fa141",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "BuildUrlItemDetail",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 720.0,
+        "y" : 96.0
+      },
+      "properties" : {
+        "Base URL" : "https://shopee.vn/"
+      },
+      "propertyDescriptors" : {
+        "Base URL" : {
+          "displayName" : "Base URL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Base URL",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "BuildUrlItemDetail",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ "failure" ],
@@ -798,7 +1017,7 @@
           "name" : "Jolt Specification",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         }
@@ -831,8 +1050,8 @@
       "name" : "JoltTransformJSON",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -608.0,
-        "y" : 256.0
+        "x" : -616.0,
+        "y" : 304.0
       },
       "properties" : {
         "Jolt Transform" : "jolt-transform-chain",
@@ -895,7 +1114,7 @@
           "name" : "Jolt Specification",
           "resourceDefinition" : {
             "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE", "TEXT" ]
+            "resourceTypes" : [ "TEXT", "FILE" ]
           },
           "sensitive" : false
         }
@@ -928,8 +1147,8 @@
       "name" : "SplitJson",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 336.0,
-        "y" : 256.0
+        "x" : 720.0,
+        "y" : 464.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -987,8 +1206,8 @@
       "name" : "v4/shop/rcmd_items",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1304.0,
-        "y" : 256.0
+        "x" : -1608.0,
+        "y" : -120.0
       },
       "properties" : {
         "character-set" : "UTF-8",
