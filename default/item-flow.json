@@ -77,36 +77,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "9dd13d93-7aab-3622-82de-a633aae60606",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "a422ab62-8758-3f0f-b47d-d912f05e232a",
-        "name" : "v4/shop/rcmd_items",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "e3e83f10-03c4-3b85-987c-401d9743e364",
         "name" : "JoltTransformJSON",
         "type" : "PROCESSOR"
@@ -126,36 +96,6 @@
         "groupId" : "flow-contents-group",
         "id" : "7f172417-762e-3142-b386-c8700382d62b",
         "name" : "GenerateFlowFile_search/search_items",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2e125a77-3efc-35ba-a23f-e8410eba972f",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
-        "name" : "RouteOnAttribute",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -187,6 +127,36 @@
         "id" : "3f7fc663-c466-3b68-b4e8-b063ecb15abc",
         "name" : "Funnel",
         "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "e3e83f10-03c4-3b85-987c-401d9743e364",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "63083273-9ef5-3e85-af24-bc1b6ee6348a",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "search_items" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
       },
       "zIndex" : 0
     }, {
@@ -262,44 +232,14 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f2afb573-c561-3d7e-a566-3263aa968f8e",
+      "identifier" : "0aa74b44-d5b4-3197-a746-a5b940f3199a",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "e3e83f10-03c4-3b85-987c-401d9743e364",
-        "name" : "JoltTransformJSON",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "8f65426c-6778-3534-be92-6f67cf9ff882",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
+      "selectedRelationships" : [ "shop/get_shop_tab" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
@@ -365,6 +305,36 @@
         "groupId" : "flow-contents-group",
         "id" : "c76bc37e-4494-37ee-8d69-40a3b28cb83f",
         "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f4bbb4d8-2d1e-365f-836b-ca5fb2d18fa1",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "a4e433a3-3926-3c0e-967a-91f20590ed7f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "shop/rcmd_items" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f71c33da-1d75-378d-8251-a9665a615aa9",
+        "name" : "RouteOnAttribute",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -456,7 +426,7 @@
       "name" : "Data",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -2288.0,
+        "x" : -2112.0,
         "y" : 352.0
       },
       "scheduledState" : "ENABLED",
@@ -564,7 +534,7 @@
           "name" : "Custom Module Directory",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
           },
           "sensitive" : false
         },
@@ -597,7 +567,7 @@
       "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "unmatched" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -619,14 +589,38 @@
         "y" : 312.0
       },
       "properties" : {
-        "Routing Strategy" : "Route to Property name"
+        "search_items" : "${url:contains('search_items')}",
+        "Routing Strategy" : "Route to Property name",
+        "shop/get_shop_tab" : "${url:contains('shop/get_shop_tab')}",
+        "shop/rcmd_items" : "${url:contains('shop/rcmd_items')}"
       },
       "propertyDescriptors" : {
+        "search_items" : {
+          "displayName" : "search_items",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "search_items",
+          "sensitive" : false
+        },
         "Routing Strategy" : {
           "displayName" : "Routing Strategy",
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "shop/get_shop_tab" : {
+          "displayName" : "shop/get_shop_tab",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "shop/get_shop_tab",
+          "sensitive" : false
+        },
+        "shop/rcmd_items" : {
+          "displayName" : "shop/rcmd_items",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "shop/rcmd_items",
           "sensitive" : false
         }
       },
@@ -638,78 +632,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-scripting-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "c3768427-7ade-3920-a1d1-43017ced6cbd",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "ExecuteScript",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 2048.0,
-        "y" : 200.0
-      },
-      "properties" : {
-        "Script Engine" : "Clojure"
-      },
-      "propertyDescriptors" : {
-        "Script File" : {
-          "displayName" : "Script File",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Script File",
-          "resourceDefinition" : {
-            "cardinality" : "SINGLE",
-            "resourceTypes" : [ "FILE" ]
-          },
-          "sensitive" : false
-        },
-        "Script Engine" : {
-          "displayName" : "Script Engine",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Script Engine",
-          "sensitive" : false
-        },
-        "Script Body" : {
-          "displayName" : "Script Body",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Script Body",
-          "sensitive" : false
-        },
-        "Module Directory" : {
-          "displayName" : "Module Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Module Directory",
-          "resourceDefinition" : {
-            "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
-          },
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.script.ExecuteScript",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -999,7 +921,7 @@
           "name" : "Custom Module Directory",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
           },
           "sensitive" : false
         },
@@ -1050,7 +972,7 @@
       "name" : "JoltTransformJSON",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -616.0,
+        "x" : -608.0,
         "y" : 304.0
       },
       "properties" : {
@@ -1096,7 +1018,7 @@
           "name" : "Custom Module Directory",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
           },
           "sensitive" : false
         },
@@ -1186,96 +1108,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.SplitJson",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "a422ab62-8758-3f0f-b47d-d912f05e232a",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "v4/shop/rcmd_items",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -1608.0,
-        "y" : -120.0
-      },
-      "properties" : {
-        "character-set" : "UTF-8",
-        "File Size" : "0B",
-        "generate-ff-custom-text" : "{\n  \"error\": 0,\n  \"error_msg\": \"\",\n  \"data\": {\n    \"key\": \"shop_page_category_tab_main_sec\",\n    \"total\": 2,\n    \"no_more\": true,\n    \"user_behaviour_config\": {\n      \"user_behaviour_config_list\": [\n        {\n          \"behaviour_type\": \"click\",\n          \"count\": 10,\n          \"duration_second\": 3600,\n          \"page_infos\": [\n            \"shop_category_landing..item\"\n          ]\n        },\n        {\n          \"behaviour_type\": \"impression\",\n          \"count\": 100,\n          \"duration_second\": 3600,\n          \"page_infos\": [\n            \"shop_category_landing..item\"\n          ]\n        }\n      ]\n    },\n    \"centralize_item_card\": {\n      \"item_cards\": [\n        {\n          \"itemid\": 28216726644,\n          \"shopid\": 739965304,\n          \"is_adult\": false,\n          \"need_kyc\": false,\n          \"item_card_display_price\": {\n            \"item_id\": 28216726644,\n            \"model_id\": 246965393152,\n            \"promotion_type\": 301,\n            \"promotion_id\": 755033802194944,\n            \"price\": 456900000000,\n            \"strikethrough_price\": 550000000000,\n            \"discount\": 17,\n            \"recommended_shop_voucher_promotion_id\": 1290949290135552,\n            \"recommended_shop_voucher_info\": {\n              \"promotion_id\": 1290949290135552,\n              \"voucher_code\": \"DONOVIP50\",\n              \"voucher_discount\": 5000000000,\n              \"time_info\": {\n                \"start_time\": 1763353260,\n                \"end_time\": 1771174740\n              },\n              \"min_spend\": 199900000000,\n              \"signature\": \"2637ae48878cf70562c6164da51514228d577a5e536d63692184ff9392ff758d\",\n              \"signature_source\": 16\n            },\n            \"original_price\": 550000000000,\n            \"model_selection_logic\": 3\n          },\n          \"item_card_display_sold_count\": {\n            \"historical_sold_count\": 0,\n            \"monthly_sold_count\": 0,\n            \"historical_sold_count_text\": \"Đã bán 10\",\n            \"monthly_sold_count_text\": \"Đã bán 4/tháng\"\n          },\n          \"is_sold_out\": false,\n          \"is_preview\": false,\n          \"label_ids\": [\n            1000264,\n            1000265,\n            1000279,\n            1009763,\n            298623352,\n            700300075,\n            700305063,\n            1718087960,\n            1428713,\n            844931064601283,\n            844931086908638,\n            1883614,\n            1119699,\n            700765004,\n            998091005,\n            2048663,\n            2098638,\n            298933397,\n            700810083,\n            2143619,\n            700810095,\n            700810096,\n            2143645,\n            2143672,\n            2158617,\n            298983321,\n            1400705063,\n            298973406,\n            2158712,\n            2153753,\n            2143697,\n            299033331,\n            2218641,\n            2213649,\n            2213728,\n            299048406,\n            299043419,\n            998236069,\n            299108332,\n            299108352,\n            299108358,\n            299138315,\n            1400000209,\n            700000280,\n            822059849520140,\n            700515093,\n            2278645,\n            1006856,\n            2278655,\n            299138366,\n            1009063,\n            2278663,\n            2113607,\n            298718379\n          ],\n          \"catid\": 100632,\n          \"shopee_verified\": false,\n          \"liked_count\": 21,\n          \"item_type\": 0,\n          \"shop_data\": {\n            \"shop_name\": \"DONO&DONO OFFICIAL STORE\",\n            \"shop_location\": \"Hà Nội\"\n          },\n          \"status\": 1,\n          \"ctime\": 1730887030,\n          \"flag\": 0,\n          \"item_status\": \"normal\",\n          \"global_cat\": {\n            \"catid\": [\n              100632,\n              100683,\n              101005\n            ]\n          },\n          \"item_rating\": {\n            \"rating_star\": 5,\n            \"rating_count\": [\n              1,\n              0,\n              0,\n              0,\n              0,\n              1\n            ]\n          },\n          \"global_brand\": {\n            \"brand_id\": 2136158,\n            \"display_name\": \"DONO&DONO\"\n          },\n          \"video_info_list\": [\n            {\n              \"video_id\": \"api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16000081730886999.mp4\",\n              \"thumb_url\": \"vn-11110105-7ras8-m29f4g08v81te5\",\n              \"duration\": 26,\n              \"version\": 2,\n              \"vid\": \"vn-11110105-6khwb-m29f4c9ernaqe6\",\n              \"formats\": [\n                {\n                  \"format\": 1600008,\n                  \"defn\": \"V720P\",\n                  \"profile\": \"MP4\",\n                  \"path\": \"api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16000081730886999.mp4\",\n                  \"url\": \"https://down-tx-sg.vod.susercontent.com/api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16000081730886999.mp4\",\n                  \"width\": 720,\n                  \"height\": 1280\n                }\n              ],\n              \"default_format\": {\n                \"format\": 1600323,\n                \"defn\": \"V540P\",\n                \"profile\": \"MP4\",\n                \"url\": \"https://mms.vod.susercontent.com/api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.default.mp4\",\n                \"width\": 540,\n                \"height\": 960\n              },\n              \"mms_data\": \"{\\\"vid\\\":\\\"vn-11110105-6khwb-m29f4c9ernaqe6\\\",\\\"biz\\\":107,\\\"duration\\\":25656,\\\"create_time\\\":1730886996,\\\"update_time\\\":1730887000,\\\"serviceID\\\":2,\\\"cover\\\":\\\"https://down-aka-sg.img.susercontent.com/vn-11110105-7ras8-m29f4g08v81te5\\\",\\\"formats\\\":[{\\\"format\\\":1600008,\\\"defn\\\":\\\"V720P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16000081730886999.mp4\\\",\\\"url\\\":\\\"https://down-tx-sg.vod.susercontent.com/api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16000081730886999.mp4\\\",\\\"width\\\":720,\\\"height\\\":1280,\\\"bitrate\\\":601478,\\\"abitrate\\\":71227,\\\"duration\\\":25566,\\\"size\\\":2172131,\\\"fps\\\":25,\\\"update_time\\\":1730887017,\\\"codec\\\":\\\"H264\\\"}],\\\"extend_formats\\\":{\\\"H265\\\":[{\\\"format\\\":1600309,\\\"defn\\\":\\\"V720P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16003091730887049.mp4\\\",\\\"url\\\":\\\"https://down-tx-sg.vod.susercontent.com/api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.16003091730887049.mp4\\\",\\\"width\\\":720,\\\"height\\\":1280,\\\"bitrate\\\":332785,\\\"abitrate\\\":71227,\\\"duration\\\":25566,\\\"size\\\":1316588,\\\"fps\\\":25,\\\"update_time\\\":1730887074,\\\"codec\\\":\\\"H265\\\"}]},\\\"default_format\\\":{\\\"format\\\":1600323,\\\"defn\\\":\\\"V540P\\\",\\\"profile\\\":\\\"MP4\\\",\\\"path\\\":\\\"\\\",\\\"url\\\":\\\"https://mms.vod.susercontent.com/api/v4/11110105/mms/vn-11110105-6khwb-m29f4c9ernaqe6.default.mp4\\\",\\\"width\\\":540,\\\"height\\\":960,\\\"bitrate\\\":335863,\\\"abitrate\\\":64256,\\\"duration\\\":25566,\\\"size\\\":1301212,\\\"fps\\\":25,\\\"update_time\\\":1730887054,\\\"codec\\\":\\\"H264\\\"}}\"\n            }\n          ],\n          \"tier_variations\": [\n            {\n              \"options\": [\n                \"\"\n              ],\n              \"type\": 0\n            }\n          ],\n          \"can_use_bundle_deal\": true,\n          \"item_card_displayed_asset\": {\n            \"name\": \"Bàn thay tã bỉm thông minh hỗ trợ chăm sóc trẻ sơ sinh, tiện lợi, dễ dàng di chuyển, an toàn chống trơn trượt\",\n            \"image\": \"vn-11134207-7ras8-m29ed2bbarhu1a\",\n            \"images\": [\n              \"vn-11134207-7ras8-m29ed2bbarhu1a\",\n              \"vn-11134207-7ras8-m29enf9tip4k7d\",\n              \"vn-11134207-7ras8-m29enf9tip4i2b\",\n              \"vn-11134207-7ras8-m29enn7lxvw27b\",\n              \"vn-11134207-7ras8-m29exjcoqdv810\",\n              \"vn-11134207-7ras8-m29exjl0e7cib9\",\n              \"vn-11134207-7ras8-m29exjmymlkk7b\",\n              \"vn-11134207-7ras8-m29exjqu72ya8d\",\n              \"vn-11134207-7ras8-m29f4s1n8muq70\"\n            ],\n            \"icon_in_image\": {\n              \"icon_type\": 2,\n              \"ads_text\": \"Ad\"\n            },\n            \"image_overlay\": {\n              \"legacy_overlay\": {\n                \"name\": \"13VCX[5-13.2.2026]\",\n                \"image_overlay\": {\n                  \"hash\": \"vn-11134258-81ztc-mk3m07ffu87b18\",\n                  \"width\": 320,\n                  \"height\": 320\n                }\n              }\n            },\n            \"seller_flag\": {\n              \"name\": \"OFFICIAL_SHOP\",\n              \"image_flag\": {\n                \"hash\": \"vn-11134258-7r98o-lyb3kdam2qw17d\",\n                \"width\": 25,\n                \"height\": 12\n              }\n            },\n            \"promotion_label_list\": [\n              {\n                \"type\": \"BUNDLE_DEAL\",\n                \"style\": \"outline\",\n                \"specs\": {\n                  \"text_color\": \"#EE4D2D\",\n                  \"border_color\": \"#EE4D2D\"\n                },\n                \"data\": {\n                  \"text\": \"Mua 2 & giảm 15.000₫\"\n                }\n              }\n            ],\n            \"discount_tag\": {\n              \"discount_text\": \"-17%\"\n            },\n            \"voucher_applied_icon\": {\n              \"can_display\": true\n            },\n            \"rating\": {\n              \"rating_text\": \"5.0\",\n              \"icon\": {\n                \"hash\": \"id-11134258-7r98o-ly1pxywrszyh0b\",\n                \"width\": 10,\n                \"height\": 10\n              },\n              \"rating_type\": 1\n            },\n            \"sold_count\": {\n              \"text\": \"Đã bán 10\"\n            },\n            \"display_price\": {\n              \"price\": 456900000000,\n              \"display_price_type\": 0\n            },\n            \"in_title_image_flags\": [\n              {\n                \"type\": 2,\n                \"name\": \"OFFICIAL_SHOP\",\n                \"icon\": {\n                  \"hash\": \"vn-11134258-7r98o-lyb3kdam2qw17d\",\n                  \"width\": 25,\n                  \"height\": 12\n                }\n              }\n            ]\n          },\n          \"info\": \"AB:642848|558007,REQID:b11ba3af4a653c7fc1662d3542e2ff00,BND:shop_page_category_tab_main,QUES:category_item_recall_node,RNK:gpu_shopv5unify_mmoe_wu_egov1_my@VN_1859664:{SCORE:0.003561},SECKEY:shop_page_category_tab_main_sec,ROI:0,DT:1770648527496,SK:b11ba3af4a653c7fc1662d3542e2ff00\",\n          \"data_type\": \"item\",\n          \"deduction_info\": \"\",\n          \"display_ad_tag\": 0,\n          \"traffic_source\": 0,\n          \"adsid\": 0,\n          \"campaign_id\": 0,\n          \"ctx_item_type\": 0,\n          \"ads_tms_info\": \"\"\n        },\n        {\n          \"itemid\": 26403864128,\n          \"shopid\": 739965304,\n          \"is_adult\": false,\n          \"need_kyc\": false,\n          \"item_card_display_price\": {\n            \"item_id\": 26403864128,\n            \"model_id\": 222941821798,\n            \"promotion_type\": 301,\n            \"promotion_id\": 755033802194944,\n            \"price\": 77400000000,\n            \"strikethrough_price\": 95000000000,\n            \"discount\": 19,\n            \"recommended_shop_voucher_promotion_id\": 1290949137698816,\n            \"recommended_shop_voucher_info\": {\n              \"promotion_id\": 1290949137698816,\n              \"voucher_code\": \"DONOVIP15\",\n              \"voucher_discount\": 1500000000,\n              \"time_info\": {\n                \"start_time\": 1763353200,\n                \"end_time\": 1771174740\n              },\n              \"min_spend\": 49900000000,\n              \"signature\": \"b7200dd97b117f26a576dc8fafd69a1c53e361b21b2c794c3f4bb8d0f58066fc\",\n              \"signature_source\": 16\n            },\n            \"original_price\": 95000000000,\n            \"model_selection_logic\": 3\n          },\n          \"item_card_display_sold_count\": {\n            \"historical_sold_count\": 0,\n            \"monthly_sold_count\": 0,\n            \"historical_sold_count_text\": \"Đã bán 92\",\n            \"monthly_sold_count_text\": \"Đã bán 7/tháng\"\n          },\n          \"is_sold_out\": false,\n          \"is_preview\": false,\n          \"label_ids\": [\n            1000264,\n            1000265,\n            1000279,\n            1009763,\n            700300075,\n            700305063,\n            844931086908638,\n            844931064601283,\n            1119699,\n            298413316,\n            298623352,\n            700765004,\n            998091005,\n            2048663,\n            2098638,\n            298933397,\n            700810083,\n            2143619,\n            700810095,\n            700810096,\n            2143645,\n            2143672,\n            2158617,\n            298983321,\n            1400705063,\n            298973406,\n            2158712,\n            2153753,\n            2143697,\n            299033331,\n            2218641,\n            2213649,\n            1883614,\n            2213728,\n            299048406,\n            299043419,\n            998236069,\n            299108332,\n            299108352,\n            299108358,\n            299138315,\n            2278645,\n            1006856,\n            2278655,\n            700000280,\n            1400000209,\n            822059849520140,\n            829011927936514,\n            298833391,\n            700515093,\n            299138366,\n            1009063,\n            2278663,\n            2113607,\n            298718379,\n            298413327\n          ],\n          \"catid\": 100632,\n          \"shopee_verified\": false,\n          \"liked_count\": 26,\n          \"item_type\": 0,\n          \"shop_data\": {\n            \"shop_name\": \"DONO&DONO OFFICIAL STORE\",\n            \"shop_location\": \"Hà Nội\"\n          },\n          \"status\": 1,\n          \"ctime\": 1719473026,\n          \"flag\": 196608,\n          \"item_status\": \"normal\",\n          \"global_cat\": {\n            \"catid\": [\n              100632,\n              100683,\n              101001\n            ]\n          },\n          \"item_rating\": {\n            \"rating_star\": 5,\n            \"rating_count\": [\n              15,\n              0,\n              0,\n              0,\n              0,\n              15\n            ]\n          },\n          \"global_brand\": {\n            \"brand_id\": 2136158,\n            \"display_name\": \"DONO&DONO\"\n          },\n          \"tier_variations\": [\n            {\n              \"options\": [\n                \"\"\n              ],\n              \"type\": 0\n            }\n          ],\n          \"can_use_bundle_deal\": true,\n          \"item_card_displayed_asset\": {\n            \"name\": \"Thảm đệm lót chống thấm DONO&DONO Hàn Quốc cho bé, thiết kế 5 lớp riêng biệt, êm ái, an toàn, chống trơn trượt\",\n            \"image\": \"vn-11134207-7r98o-lx0udqmkzrh791\",\n            \"images\": [\n              \"vn-11134207-7r98o-lx0udqmkzrh791\",\n              \"vn-11134207-7r98o-lx0udqml5dqzf4\",\n              \"vn-11134207-7r98o-lx0udqml3z6j9a\",\n              \"vn-11134207-7r98o-lx0udqml2km3db\",\n              \"vn-11134207-7r98o-lx0udqml9lgb23\",\n              \"vn-11134207-7r98o-lx0udqmkycwre3\",\n              \"vn-11134207-7r98o-lx0udqml6sbf64\",\n              \"vn-11134207-7r98o-lx2ac2956zff95\",\n              \"vn-11134207-7r98o-lx2ac2958dzv37\"\n            ],\n            \"icon_in_image\": {\n              \"ads_text\": \"Ad\"\n            },\n            \"image_overlay\": {\n              \"legacy_overlay\": {\n                \"name\": \"13VCX[5-13.2.2026]\",\n                \"image_overlay\": {\n                  \"hash\": \"vn-11134258-81ztc-mk3m07ffu87b18\",\n                  \"width\": 320,\n                  \"height\": 320\n                }\n              }\n            },\n            \"seller_flag\": {\n              \"name\": \"OFFICIAL_SHOP\",\n              \"image_flag\": {\n                \"hash\": \"vn-11134258-7r98o-lyb3kdam2qw17d\",\n                \"width\": 25,\n                \"height\": 12\n              }\n            },\n            \"promotion_label_list\": [\n              {\n                \"type\": \"BUNDLE_DEAL\",\n                \"style\": \"outline\",\n                \"specs\": {\n                  \"text_color\": \"#EE4D2D\",\n                  \"border_color\": \"#EE4D2D\"\n                },\n                \"data\": {\n                  \"text\": \"Mua 2 & giảm 15.000₫\"\n                }\n              }\n            ],\n            \"discount_tag\": {\n              \"discount_text\": \"-19%\"\n            },\n            \"voucher_applied_icon\": {\n              \"can_display\": true\n            },\n            \"rating\": {\n              \"rating_text\": \"5.0\",\n              \"icon\": {\n                \"hash\": \"id-11134258-7r98o-ly1pxywrszyh0b\",\n                \"width\": 10,\n                \"height\": 10\n              },\n              \"rating_type\": 1\n            },\n            \"sold_count\": {\n              \"text\": \"Đã bán 92\"\n            },\n            \"display_price\": {\n              \"price\": 77400000000,\n              \"display_price_type\": 0\n            },\n            \"in_title_image_flags\": [\n              {\n                \"type\": 2,\n                \"name\": \"OFFICIAL_SHOP\",\n                \"icon\": {\n                  \"hash\": \"vn-11134258-7r98o-lyb3kdam2qw17d\",\n                  \"width\": 25,\n                  \"height\": 12\n                }\n              }\n            ]\n          },\n          \"info\": \"AB:642848|558007,REQID:b11ba3af4a653c7fc1662d3542e2ff00,BND:shop_page_category_tab_main,QUES:category_item_recall_node,RNK:gpu_shopv5unify_mmoe_wu_egov1_my@VN_1859664:{SCORE:0.002439},SECKEY:shop_page_category_tab_main_sec,ROI:0,DT:1770648527496,SK:b11ba3af4a653c7fc1662d3542e2ff00\",\n          \"data_type\": \"item\",\n          \"deduction_info\": \"\",\n          \"display_ad_tag\": 0,\n          \"traffic_source\": 0,\n          \"adsid\": 0,\n          \"campaign_id\": 0,\n          \"ctx_item_type\": 0,\n          \"ads_tms_info\": \"\"\n        }\n      ],\n      \"card_set\": {\n        \"layout_id\": 1,\n        \"element_toggle\": {\n          \"atc_button\": false,\n          \"feedback_button\": false\n        },\n        \"card_set_name\": \"Shop Product Tab Other Sub Tab\"\n      },\n      \"card_version\": \"standard_version_v1\"\n    },\n    \"item_card_abt_data\": {\n      \"hit_exp_group\": \"Treatment 2\"\n    },\n    \"item_version\": 1,\n    \"dynamic_translation_status\": 0\n  }\n}",
-        "Batch Size" : "1",
-        "Unique FlowFiles" : "false",
-        "Data Format" : "Text"
-      },
-      "propertyDescriptors" : {
-        "character-set" : {
-          "displayName" : "Character Set",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "character-set",
-          "sensitive" : false
-        },
-        "File Size" : {
-          "displayName" : "File Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "File Size",
-          "sensitive" : false
-        },
-        "mime-type" : {
-          "displayName" : "Mime Type",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "mime-type",
-          "sensitive" : false
-        },
-        "generate-ff-custom-text" : {
-          "displayName" : "Custom Text",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "generate-ff-custom-text",
-          "sensitive" : false
-        },
-        "Batch Size" : {
-          "displayName" : "Batch Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Batch Size",
-          "sensitive" : false
-        },
-        "Unique FlowFiles" : {
-          "displayName" : "Unique FlowFiles",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Unique FlowFiles",
-          "sensitive" : false
-        },
-        "Data Format" : {
-          "displayName" : "Data Format",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Data Format",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "1 min",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
