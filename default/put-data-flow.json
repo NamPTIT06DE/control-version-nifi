@@ -1,5 +1,14 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "285965cb-cca7-3f11-800a-9d4b1fafde7b" : {
+      "identifier" : "285965cb-cca7-3f11-800a-9d4b1fafde7b",
+      "name" : "JsonTreeReader"
+    },
+    "f8737ac8-e008-36e3-a57d-738a51d01c2a" : {
+      "identifier" : "f8737ac8-e008-36e3-a57d-738a51d01c2a",
+      "name" : "MongoDBControllerService"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1769081081031,
     "description" : "",
@@ -11,13 +20,141 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "469e726f-fe16-32df-aece-8e588ab978cd",
+        "name" : "PutMongoRecord",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1b92815c-df32-3f52-a5ac-72491ad4e38f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "shop" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d41cf91-9608-34db-84e7-603eabcbaaca",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d41cf91-9608-34db-84e7-603eabcbaaca",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "27f9b354-7743-3f09-a878-fb87d7b5a06c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "d89383c0-ca07-30aa-972c-0484b595a216",
+        "name" : "Input",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6a871a5c-9b53-30e4-9096-3e637b664c71",
+        "name" : "PutMongoRecord",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5be5c4a6-d163-3b23-982a-ed17479d932f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "item" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d41cf91-9608-34db-84e7-603eabcbaaca",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1892806a-f068-36c3-a0f1-1b1c3f611fca",
+        "name" : "PutMongoRecord",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1cc043c3-c22e-37c3-9ba1-f175c9dac874",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "review" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d41cf91-9608-34db-84e7-603eabcbaaca",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "285965cb-cca7-3f11-800a-9d4b1fafde7b" : {
+        "identifier" : "285965cb-cca7-3f11-800a-9d4b1fafde7b",
+        "name" : "JsonTreeReader"
+      },
+      "f8737ac8-e008-36e3-a57d-738a51d01c2a" : {
+        "identifier" : "f8737ac8-e008-36e3-a57d-738a51d01c2a",
+        "name" : "MongoDBControllerService"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -31,8 +168,8 @@
       "name" : "Input",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -401.0000272903351,
-        "y" : -134.50000042842737
+        "x" : -184.0,
+        "y" : -224.0
       },
       "scheduledState" : "ENABLED",
       "type" : "INPUT_PORT"
@@ -47,7 +184,7 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "unmatched" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -60,196 +197,153 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "9e36555c-0772-3f7b-97b0-90f77fa27e35",
+      "identifier" : "8d41cf91-9608-34db-84e7-603eabcbaaca",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PutDatabaseRecord",
+      "name" : "RouteOnAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 352.0,
-        "y" : -192.0
+        "x" : 616.0,
+        "y" : -264.0
       },
       "properties" : {
-        "put-db-record-allow-multiple-statements" : "false",
-        "table-schema-cache-size" : "100",
-        "put-db-record-quoted-table-identifiers" : "false",
-        "put-db-record-unmatched-column-behavior" : "Fail on Unmatched Columns",
-        "put-db-record-translate-field-names" : "true",
-        "put-db-record-query-timeout" : "0 seconds",
-        "rollback-on-failure" : "false",
-        "put-db-record-binary-format" : "UTF-8",
-        "db-type" : "Generic",
-        "put-db-record-quoted-identifiers" : "false",
-        "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
-        "put-db-record-max-batch-size" : "1000",
-        "database-session-autocommit" : "false"
+        "item" : "${type:contains('ite')}",
+        "Routing Strategy" : "Route to Property name",
+        "shop" : "${type:contains('shop')}",
+        "review" : "${type:contains('rev')}"
       },
       "propertyDescriptors" : {
-        "put-db-record-allow-multiple-statements" : {
-          "displayName" : "Allow Multiple SQL Statements",
-          "dynamic" : false,
+        "item" : {
+          "displayName" : "item",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-allow-multiple-statements",
+          "name" : "item",
           "sensitive" : false
         },
-        "table-schema-cache-size" : {
-          "displayName" : "Table Schema Cache Size",
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "table-schema-cache-size",
+          "name" : "Routing Strategy",
           "sensitive" : false
         },
-        "put-db-record-schema-name" : {
-          "displayName" : "Schema Name",
-          "dynamic" : false,
+        "shop" : {
+          "displayName" : "shop",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-schema-name",
+          "name" : "shop",
           "sensitive" : false
         },
-        "put-db-record-field-containing-sql" : {
-          "displayName" : "Field Containing SQL",
-          "dynamic" : false,
+        "review" : {
+          "displayName" : "review",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-field-containing-sql",
+          "name" : "review",
           "sensitive" : false
-        },
-        "put-db-record-quoted-table-identifiers" : {
-          "displayName" : "Quote Table Identifiers",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-quoted-table-identifiers",
-          "sensitive" : false
-        },
-        "Statement Type Record Path" : {
-          "displayName" : "Statement Type Record Path",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Statement Type Record Path",
-          "sensitive" : false
-        },
-        "put-db-record-unmatched-column-behavior" : {
-          "displayName" : "Unmatched Column Behavior",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-unmatched-column-behavior",
-          "sensitive" : false
-        },
-        "Delete Keys" : {
-          "displayName" : "Delete Keys",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Delete Keys",
-          "sensitive" : false
-        },
-        "put-db-record-catalog-name" : {
-          "displayName" : "Catalog Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-catalog-name",
-          "sensitive" : false
-        },
-        "put-db-record-translate-field-names" : {
-          "displayName" : "Translate Field Names",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-translate-field-names",
-          "sensitive" : false
-        },
-        "put-db-record-dcbp-service" : {
-          "displayName" : "Database Connection Pooling Service",
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-mongodb-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6a871a5c-9b53-30e4-9096-3e637b664c71",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PutMongoRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1296.0,
+        "y" : -544.0
+      },
+      "properties" : {
+        "mongo-client-service" : "f8737ac8-e008-36e3-a57d-738a51d01c2a",
+        "ordered" : "False",
+        "insert_count" : "100",
+        "Mongo Collection Name" : "item-shopee",
+        "update-mode" : "one",
+        "record-reader" : "285965cb-cca7-3f11-800a-9d4b1fafde7b",
+        "bypass-validation" : "False",
+        "Mongo Database Name" : "ecom-data"
+      },
+      "propertyDescriptors" : {
+        "mongo-client-service" : {
+          "displayName" : "Client Service",
           "dynamic" : false,
           "identifiesControllerService" : true,
-          "name" : "put-db-record-dcbp-service",
+          "name" : "mongo-client-service",
           "sensitive" : false
         },
-        "put-db-record-query-timeout" : {
-          "displayName" : "Max Wait Time",
+        "ordered" : {
+          "displayName" : "Ordered",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-query-timeout",
+          "name" : "ordered",
           "sensitive" : false
         },
-        "rollback-on-failure" : {
-          "displayName" : "Rollback On Failure",
+        "insert_count" : {
+          "displayName" : "Batch Size",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "rollback-on-failure",
+          "name" : "insert_count",
           "sensitive" : false
         },
-        "put-db-record-statement-type" : {
-          "displayName" : "Statement Type",
+        "update-key-fields" : {
+          "displayName" : "Update Key Fields",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-statement-type",
+          "name" : "update-key-fields",
           "sensitive" : false
         },
-        "put-db-record-binary-format" : {
-          "displayName" : "Binary String Format",
+        "Mongo Collection Name" : {
+          "displayName" : "Mongo Collection Name",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "put-db-record-binary-format",
+          "name" : "Mongo Collection Name",
           "sensitive" : false
         },
-        "db-type" : {
-          "displayName" : "Database Type",
+        "update-mode" : {
+          "displayName" : "Update Mode",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "db-type",
+          "name" : "update-mode",
           "sensitive" : false
         },
-        "put-db-record-update-keys" : {
-          "displayName" : "Update Keys",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-update-keys",
-          "sensitive" : false
-        },
-        "put-db-record-quoted-identifiers" : {
-          "displayName" : "Quote Column Identifiers",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-quoted-identifiers",
-          "sensitive" : false
-        },
-        "put-db-record-table-name" : {
-          "displayName" : "Table Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-table-name",
-          "sensitive" : false
-        },
-        "put-db-record-unmatched-field-behavior" : {
-          "displayName" : "Unmatched Field Behavior",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-unmatched-field-behavior",
-          "sensitive" : false
-        },
-        "put-db-record-max-batch-size" : {
-          "displayName" : "Maximum Batch Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "put-db-record-max-batch-size",
-          "sensitive" : false
-        },
-        "put-db-record-record-reader" : {
+        "record-reader" : {
           "displayName" : "Record Reader",
           "dynamic" : false,
           "identifiesControllerService" : true,
-          "name" : "put-db-record-record-reader",
+          "name" : "record-reader",
           "sensitive" : false
         },
-        "Data Record Path" : {
-          "displayName" : "Data Record Path",
+        "bypass-validation" : {
+          "displayName" : "Bypass Validation",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Data Record Path",
+          "name" : "bypass-validation",
           "sensitive" : false
         },
-        "database-session-autocommit" : {
-          "displayName" : "Database Session AutoCommit",
+        "Mongo Database Name" : {
+          "displayName" : "Mongo Database Name",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "database-session-autocommit",
+          "name" : "Mongo Database Name",
           "sensitive" : false
         }
       },
@@ -260,7 +354,219 @@
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.PutDatabaseRecord",
+      "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-mongodb-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "469e726f-fe16-32df-aece-8e588ab978cd",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PutMongoRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1312.0,
+        "y" : 48.0
+      },
+      "properties" : {
+        "mongo-client-service" : "f8737ac8-e008-36e3-a57d-738a51d01c2a",
+        "ordered" : "False",
+        "insert_count" : "100",
+        "Mongo Collection Name" : "shopInfo-shopee",
+        "update-mode" : "one",
+        "record-reader" : "285965cb-cca7-3f11-800a-9d4b1fafde7b",
+        "bypass-validation" : "False",
+        "Mongo Database Name" : "ecom-data"
+      },
+      "propertyDescriptors" : {
+        "mongo-client-service" : {
+          "displayName" : "Client Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "mongo-client-service",
+          "sensitive" : false
+        },
+        "ordered" : {
+          "displayName" : "Ordered",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ordered",
+          "sensitive" : false
+        },
+        "insert_count" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "insert_count",
+          "sensitive" : false
+        },
+        "update-key-fields" : {
+          "displayName" : "Update Key Fields",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "update-key-fields",
+          "sensitive" : false
+        },
+        "Mongo Collection Name" : {
+          "displayName" : "Mongo Collection Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Collection Name",
+          "sensitive" : false
+        },
+        "update-mode" : {
+          "displayName" : "Update Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "update-mode",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "bypass-validation" : {
+          "displayName" : "Bypass Validation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "bypass-validation",
+          "sensitive" : false
+        },
+        "Mongo Database Name" : {
+          "displayName" : "Mongo Database Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Database Name",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-mongodb-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1892806a-f068-36c3-a0f1-1b1c3f611fca",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PutMongoRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1304.0,
+        "y" : -264.0
+      },
+      "properties" : {
+        "mongo-client-service" : "f8737ac8-e008-36e3-a57d-738a51d01c2a",
+        "ordered" : "False",
+        "insert_count" : "100",
+        "Mongo Collection Name" : "reviewItems-shopee",
+        "update-mode" : "one",
+        "record-reader" : "285965cb-cca7-3f11-800a-9d4b1fafde7b",
+        "bypass-validation" : "False",
+        "Mongo Database Name" : "ecom-data"
+      },
+      "propertyDescriptors" : {
+        "mongo-client-service" : {
+          "displayName" : "Client Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "mongo-client-service",
+          "sensitive" : false
+        },
+        "ordered" : {
+          "displayName" : "Ordered",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ordered",
+          "sensitive" : false
+        },
+        "insert_count" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "insert_count",
+          "sensitive" : false
+        },
+        "update-key-fields" : {
+          "displayName" : "Update Key Fields",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "update-key-fields",
+          "sensitive" : false
+        },
+        "Mongo Collection Name" : {
+          "displayName" : "Mongo Collection Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Collection Name",
+          "sensitive" : false
+        },
+        "update-mode" : {
+          "displayName" : "Update Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "update-mode",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "bypass-validation" : {
+          "displayName" : "Bypass Validation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "bypass-validation",
+          "sensitive" : false
+        },
+        "Mongo Database Name" : {
+          "displayName" : "Mongo Database Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mongo Database Name",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
