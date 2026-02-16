@@ -406,7 +406,7 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : 3592.0,
+        "x" : 3584.0,
         "y" : 1536.0
       } ],
       "componentType" : "CONNECTION",
@@ -717,8 +717,8 @@
         "branch" : "main",
         "bucketId" : "default",
         "flowId" : "put-data-flow",
-        "storageLocation" : "git@github.com:NAMPTIT06DE/control-version-nifi.git",
-        "version" : "5c4b208e00f13a07ba5f43b86c70197464c99a49"
+        "storageLocation" : "git@github.com:NamPTIT06DE/control-version-nifi.git",
+        "version" : "1bc2a4d2d408a8c0b054a69200e900d1902d6b0b"
       }
     }, {
       "comments" : "",
@@ -753,7 +753,7 @@
         "bucketId" : "default",
         "flowId" : "review-flow",
         "storageLocation" : "git@github.com:NamPTIT06DE/control-version-nifi.git",
-        "version" : "8d0546a5e48b64fcebe0528eb809799f16ec1689"
+        "version" : "7ccc16392be366e997934f587dda8354295a9377"
       }
     }, {
       "comments" : "",
@@ -788,7 +788,7 @@
         "bucketId" : "default",
         "flowId" : "item-flow",
         "storageLocation" : "git@github.com:NamPTIT06DE/control-version-nifi.git",
-        "version" : "10a6e35354ba40911e9bd8585367098de5f0e2a2"
+        "version" : "f38e87b1156c0783f7765f4092ce8b433a6c80d8"
       }
     }, {
       "comments" : "",
@@ -823,7 +823,7 @@
         "bucketId" : "default",
         "flowId" : "shop-flow",
         "storageLocation" : "git@github.com:NamPTIT06DE/control-version-nifi.git",
-        "version" : "0a43ef7c4dce056a531352c3ba3a7c3515cf2522"
+        "version" : "731ff357cd70bdb746b2972b182265c1272d34a3"
       }
     }, {
       "comments" : "",
